@@ -18,17 +18,17 @@
 			<div class="account-bottom">
 				
 				<div class="col-md-6 account-left">
-					<form>
+					<form id="form1" runat="server">
 					<div class="account-top heading">
 						<h3>LOGIN ACCOUNT</h3>
 					</div>
 					<div class="address">
-						<span>Email Address</span>
-						<input type="text">
+						<span>Account name</span>
+                        <asp:TextBox ID="txtTenTK" runat="server"></asp:TextBox>
 					</div>
 					<div class="address">
 						<span>Password</span>
-						<input type="text">
+                        <asp:TextBox ID="txtMK" runat="server"></asp:TextBox>
 					</div>
 					<div class="address">
 						<a class="forgot" href="#">Forgot Your Password?</a>

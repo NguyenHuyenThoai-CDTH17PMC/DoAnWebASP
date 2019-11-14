@@ -16,33 +16,41 @@
 	<div class="account">
 		<div class="container"> 
 			<div class="account-bottom">
-				<div class="col-md-8 account-left">
-					<form>
+				<div class="col-md-6 account-left">
+					<form id="form1" runat="server">
 					<div class="account-top heading">
 						<h3>NEW CUSTOMERS</h3>
 					</div>
 					<div class="address">
-						<span>First Name</span>
-						<input type="text">
-					</div>
-					<div class="address">
-						<span>Last Name</span>
-						<input type="text">
-					</div>
-					<div class="address">
-						<span>Email Address</span>
-						<input type="text">
+						<span>Account name</span>
+						 <asp:TextBox ID="txtTenTK" runat="server"></asp:TextBox>
 					</div>
 					<div class="address">
 						<span>Password</span>
-						<input type="text">
+						 <asp:TextBox ID="txtMK" runat="server" ></asp:TextBox>
 					</div>
 					<div class="address">
 						<span>Reenter Password</span>
-						<input type="text">
+						 <asp:TextBox ID="txtNLMK" runat="server" ></asp:TextBox>
+					</div>
+					<div class="address">
+						<span>Email</span>
+						<asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+					</div>
+					<div class="address">
+						<span>Phone Number</span>
+						<asp:TextBox ID="txtSDT" runat="server"></asp:TextBox>
+					</div>
+                    <div class="address">
+						<span>Address</span>
+						<asp:TextBox ID="txtDiaChi" runat="server"></asp:TextBox>
+					</div>
+                    <div class="address">
+						<span>Full name</span>
+						<asp:TextBox ID="txtHoTen" runat="server"></asp:TextBox>
 					</div>
 					<div class="address new">
-						<input type="submit" value="submit">
+                        <asp:Button ID="btnDangKi" runat="server" Text="Registration" />
 					</div>
 					</form>
 				</div>
