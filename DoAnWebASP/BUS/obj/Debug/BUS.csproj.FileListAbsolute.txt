@@ -1,0 +1,7 @@
+E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\BUS.dll
+E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\BUS.pdb
+E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\DAO.dll
+E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\DAO.pdb
+E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\BUS\obj\Debug\BUS.dll
+E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\BUS\obj\Debug\BUS.pdb
