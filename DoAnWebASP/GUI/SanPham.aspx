@@ -31,7 +31,7 @@
 							</a>
 						<h4><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></h4>
 						<p><a class="item_add" href="#"><i></i>
-                            <asp:Label ID="lblGiaTien" runat="server" class=" item_price" Text='<%# Eval("GiaTien") %>'></asp:Label>
+                            <asp:Label ID="lblGiaTien" runat="server" class=" item_price" Text='<%# "$"+Eval("GiaTien") %>'></asp:Label>
 						   </a></p>
 					</div>
 				</div>

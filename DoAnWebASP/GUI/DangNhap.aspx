@@ -17,7 +17,7 @@
 		<div class="container"> 
 			<div class="account-bottom">
 				
-				<div class="col-md-8 account-left">
+				<div class="col-md-6 account-left">
 					<form>
 					<div class="account-top heading">
 						<h3>LOGIN ACCOUNT</h3>
