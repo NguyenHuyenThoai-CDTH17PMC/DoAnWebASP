@@ -17,126 +17,32 @@
 		<div class="container">
 			<div class="product-main">
 				<div class="col-md-9 p-left">
+                
 				<div class="product-one">
+                    <asp:Repeater ID="rptSanPham" runat="server">
+                    <ItemTemplate>
 				<div class="col-md-4 product-left single-left"> 
 					<div class="p-one simpleCart_shelfItem">
 						<a href="single.html">
-								<img src="images/shoes-1.png" alt="" />
+								 <asp:Image ID="imgAnhMinhHoa" runat="server" ImageUrl='<%# "images/" + Eval("AnhMinhHoa") %>' />
 								<div class="mask mask1">
 									<span>Quick View</span>
 								</div>
 							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						<h4><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></h4>
+						<p><a class="item_add" href="#"><i></i>
+                            <asp:Label ID="lblGiaTien" runat="server" class=" item_price" Text='<%# Eval("GiaTien") %>'></asp:Label>
+						   </a></p>
 					</div>
 				</div>
-				<div class="col-md-4 product-left single-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						<a href="single.html">
-								<img src="images/shoes-2.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-					</div>
-				</div>
-				<div class="col-md-4 product-left single-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						<a href="single.html">
-								<img src="images/shoes-3.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-					</div>
-				</div>
+                        </ItemTemplate>
+                        </asp:Repeater>
 				<div class="clearfix"> </div>
 			</div>
-			<div class="product-one">
-				<div class="col-md-4 product-left single-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						<a href="single.html">
-								<img src="images/shoes-5.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-					</div>
-				</div>
-				<div class="col-md-4 product-left single-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						<a href="single.html">
-								<img src="images/shoes-6.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-					</div>
-				</div>
-				<div class="col-md-4 product-left single-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						<a href="single.html">
-								<img src="images/shoes-7.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-					</div>
-				</div>
-			<div class="clearfix"> </div>
+                        
+                   
 			</div>
-			<div class="product-one">
-				<div class="col-md-4 product-left single-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						<a href="single.html">
-								<img src="images/shoes-15.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-						
-					</div>
-				</div>
-				<div class="col-md-4 product-left single-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						<a href="single.html">
-								<img src="images/shoes-10.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-						
-					</div>
-				</div>
-				<div class="col-md-4 product-left single-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						<a href="single.html">
-								<img src="images/shoes-11.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			</div>
+  
 			<div class="col-md-3 p-right single-right">
 				<h3>Categories</h3>
 					<ul class="product-categories">

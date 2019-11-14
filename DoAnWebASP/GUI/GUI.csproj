@@ -184,6 +184,10 @@
       <Project>{b203e9aa-903e-4d05-ac06-0ab9e738fbdb}</Project>
       <Name>BUS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{b20cc6ad-d7aa-4801-88aa-3ae733c2d777}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
