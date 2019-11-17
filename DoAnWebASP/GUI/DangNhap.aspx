@@ -28,11 +28,11 @@
 					</div>
 					<div class="address">
 						<span>Password</span>
-                        <asp:TextBox ID="txtMK" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtMK" runat="server" TextMode="Password" style="border: 1px solid #242424;outline: none;width: 100%;font-size: 14px;padding: 10px 10px;font-family: 'Lato', sans-serif;"></asp:TextBox>
 					</div>
 					<div class="address">
 						<a class="forgot" href="#">Forgot Your Password?</a>
-						<input type="submit" value="Login">
+                        <asp:Button ID="btnDangNhap" runat="server" Text="Login" />
 					</div>
 				</div>
 				</form>
