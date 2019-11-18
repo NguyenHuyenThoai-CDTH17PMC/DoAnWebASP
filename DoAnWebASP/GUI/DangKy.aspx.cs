@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DTO;
+using BUS;
 
 namespace GUI
 {
@@ -11,7 +13,27 @@ namespace GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void btnDangKi_Click(object sender, EventArgs e)
+        {
+            TaiKhoanDTO tk = new TaiKhoanDTO();
+            tk.TenTaiKhoan = txtTenTK.Text;
+            tk.MatKhau = txtMK.Text;
+            tk.Email = txtEmail.Text;
+            tk.Sdt = txtSDT.Text;
+            tk.DiaChi = txtDiaChi.Text;
+            tk.HoTen = txtHoTen.Text;
+
+            if (TaiKhoanBUS.ThemTK(tk))
+            {
+                Response.Write("<script>alert('Đăng kí thành công')</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('Tên tài khoản đã có người sử dụng. Đăng kí thất bại')</script>");
+            }
         }
     }
 }

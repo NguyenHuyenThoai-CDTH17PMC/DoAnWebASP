@@ -61,7 +61,7 @@
                          <asp:RequiredFieldValidator ID="rfvHoTen" runat="server"  style="color:#ff0000" ControlToValidate="txtHoTen" ErrorMessage="Chưa nhập họ tên" Display="Dynamic" ></asp:RequiredFieldValidator>
 					</div>
 					<div class="address new">
-                        <asp:Button ID="btnDangKi" runat="server" Text="Registration" />
+                        <asp:Button ID="btnDangKi" runat="server" onclick="btnDangKi_Click" Text="Registration" />
 					</div>
 					</form>
 				</div>
