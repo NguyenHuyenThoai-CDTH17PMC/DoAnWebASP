@@ -63,7 +63,7 @@ namespace DAO
             return DataProvider.ExecuteInsertQuery(query, param) == 1;
         }
 
-        public static bool SuaTK(TaiKhoanDTO tk)
+       /* public static bool SuaTK(TaiKhoanDTO tk)
         {
             string query = "UPDATE TaiKhoan SET MatKhau = @MatKhau, Email = @Email, SDT = @SDT, DiaChi = @DiaChi, HoTen = @HoTen, LaAdmin = @LaAdmin, AnhDaiDien = @AnhDaiDien, TrangThai = @TrangThai WHERE TenTaiKhoan = @TenTaiKhoan";
             SqlParameter[] param = new SqlParameter[9];
@@ -78,7 +78,7 @@ namespace DAO
             param[8] = new SqlParameter("@TrangThai", tk.TrangThai);
             return DataProvider.ExecuteUpdateQuery(query, param) == 1;
         }
-
+        
         public static bool XoaTK(string tenTK)
         {
             string query = "UPDATE TaiKhoan SET TrangThai = 0 WHERE TenTaiKhoan = @TenTaiKhoan";
@@ -86,7 +86,7 @@ namespace DAO
             param[0] = new SqlParameter("@TenTaiKhoan", tenTK);
             return DataProvider.ExecuteUpdateQuery(query, param) == 1;
         }
-
+        */
         public static TaiKhoanDTO ConvertToDTO(DataRow dr)
         {
             TaiKhoanDTO tk = new TaiKhoanDTO();

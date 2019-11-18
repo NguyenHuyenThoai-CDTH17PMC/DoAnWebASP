@@ -51,7 +51,7 @@ namespace BUS
             }
         }
 
-        public static bool SuaTK(TaiKhoanDTO tk)
+        /*public static bool SuaTK(TaiKhoanDTO tk)
         {
             if (!TaiKhoanDAO.KTTKTonTai(tk.TenTaiKhoan))
             {
@@ -73,6 +73,6 @@ namespace BUS
             {
                 return TaiKhoanDAO.XoaTK(tenTK);
             }
-        }
+        }*/
     }
 }
