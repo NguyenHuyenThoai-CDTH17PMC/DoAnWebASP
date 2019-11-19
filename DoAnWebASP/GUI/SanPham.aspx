@@ -23,12 +23,12 @@
                     <ItemTemplate>
 				<div class="col-md-4 product-left single-left"> 
 					<div class="p-one simpleCart_shelfItem">
-						<a href="single.html">
+						<asp:HyperLink ID="hplXemChiTiet" runat="server" NavigateUrl='<%# "ChiTietSanPham.aspx" %>' >
 								 <asp:Image ID="imgAnhMinhHoa" runat="server" ImageUrl='<%# "images/" + Eval("AnhMinhHoa") %>' />
 								<div class="mask mask1">
 									<span>Quick View</span>
 								</div>
-							</a>
+							</asp:HyperLink>
 						<h4><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></h4>
 						<p><a class="item_add" href="#"><i></i>
                             <asp:Label ID="lblGiaTien" runat="server" class=" item_price" Text='<%# "$"+Eval("GiaTien") %>'></asp:Label>

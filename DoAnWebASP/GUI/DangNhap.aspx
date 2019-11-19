@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="DangNhap.aspx.cs" Inherits="GUI.DangNhap" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--start-breadcrumbs-->
+
 	<div class="breadcrumbs">
 		<div class="container">
 			<div class="breadcrumbs-main">
@@ -32,10 +33,11 @@
 					</div>
 					<div class="address">
 						<a class="forgot" href="#">Forgot Your Password?</a>
-                        <asp:Button ID="btnDangNhap" runat="server" Text="Login" />
+                        <asp:Button ID="btnDangNhap" runat="server" Text="Login" OnClick="btnDangNhap_Click" />
 					</div>
+                        </form>
 				</div>
-				</form>
+				
 				<div class="clearfix"> </div>
 			</div>
 		</div>
