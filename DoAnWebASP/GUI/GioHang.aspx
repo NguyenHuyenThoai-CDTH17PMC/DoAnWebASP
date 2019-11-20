@@ -1,11 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="GioHang.aspx.cs" Inherits="GUI.GioHang" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--start-breadcrumbs-->
+     
 	<div class="breadcrumbs">
 		<div class="container">
 			<div class="breadcrumbs-main">
 				<ol class="breadcrumb">
-					<li><a href="index.html">Home</a></li>
+					<li><asp:HyperLink ID="hplTrangChu" runat="server" NavigateUrl="~/TrangChu.aspx">Home</asp:HyperLink></li>
 					<li class="active">Checkout</li>
 				</ol>
 			</div>
@@ -45,47 +46,35 @@
 				
 			<div class="in-check" >
 				<ul class="unit">
-					<li><span>Item</span></li>
+					<li style="margin-left: 70px;"><span>Item</span></li>
 					<li><span>Product Name</span></li>		
 					<li><span>Unit Price</span></li>
-					<li><span>Stock Status</span></li>
+					<li><span>Amount</span></li>
 					<li> </li>
 					<div class="clearfix"> </div>
 				</ul>
+                <asp:Repeater ID="rptGioHang" runat="server">
+                    <ItemTemplate>
+                         
 				<ul class="cart-header">
-					<div class="close1"> </div>
-						<li class="ring-in"><a href="single.html" ><img src="images/s-1.jpg" class="img-responsive" alt=""></a>
+					<div> <asp:LinkButton ID="btnXoaGH" runat="server" CssClass="btn" OnClick="btnXoaGH_Click" style="font-size: 45px;margin-left: -5px;margin-bottom: -123px;"><i class="fa fa-trash"></i></asp:LinkButton></div>
+						<li class="ring-in"><a href="single.html" >
+                            <asp:Image ID="imgAnhMinhHoa" runat="server" ImageUrl='<%# "images/" + Eval("AnhMinhHoa") %>' style="width: 180px;margin-left: 60px;margin-top: -40px;"/></a>
 						</li>
-						<li><span>Woo Dress</span></li>
-						<li><span>$ 290.00</span></li>
-						<li><span>In Stock</span></li>
+						<li><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></li>
+						<li><asp:Label ID="lblGiaTien" runat="server" Text='<%# Eval("GiaTien") %>'></asp:Label></li>
+						<li><asp:Label ID="lblSoLuong" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label></li>
 						<li> <a href="single.html" class="add-cart cart-check">ADD TO CART</a></li>
 					<div class="clearfix"> </div>
 				</ul>
-				<ul class=" cart-header1">
-					<div class="close2"> </div>
-						<li class="ring-in"><a href="single.html" ><img src="images/s-2.jpg" class="img-responsive" alt=""></a>
-						</li>
-						<li><span>Elliot Shoes</span></li>
-						<li><span>$ 300.00</span></li>
-						<li><span>In Stock</span></li>
-						<li> <a href="single.html" class="add-cart cart-check">ADD TO CART</a></li>
-						<div class="clearfix"> </div>
-				</ul>
-				<ul class="cart-header2">
-					<div class="close3"> </div>
-						<li class="ring-in"><a href="single.html" ><img src="images/s-4.jpg" class="img-responsive" alt=""></a>
-						</li>
-						<li><span>Woo Dress</span></li>
-						<li><span>$ 360.00</span></li>
-						<li><span>In Stock</span></li>
-						<li> <a href="single.html" class="add-cart cart-check">ADD TO CART</a></li>
-						<div class="clearfix"> </div>
-				</ul>
+                            
+                        </ItemTemplate>
+                    </asp:Repeater>
 			</div>
 			</div>  
 		 </div>
 		</div>
 	</div>
+        
 	<!--end-ckeckout-->
 </asp:Content>

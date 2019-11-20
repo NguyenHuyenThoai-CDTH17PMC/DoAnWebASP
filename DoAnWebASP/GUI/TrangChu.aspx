@@ -51,7 +51,7 @@
 							<h1><a href="single.html">Duis dictum volutpat</a></h1>
 							<p>Nulla tempus facilisis purus at.</p>
 							<div class="b-btn"> 
-								<a href="single.html">SHOP NOW</a>
+                                <asp:HyperLink ID="hplSanPham" runat="server" NavigateUrl="~/SanPham.aspx">SHOP NOW</asp:HyperLink>
 							</div>
 						</div>
 						<div class="bnr-right"> 
@@ -66,7 +66,7 @@
 							<h2><a href="single.html">Phasellus quis nunc</a></h2>
 							<p>Nulla tempus facilisis purus at.</p>
 							<div class="b-btn"> 
-								<a href="single.html">SHOP NOW</a>
+								<asp:HyperLink ID="hplSanPham2" runat="server" NavigateUrl="~/SanPham.aspx" >SHOP NOW</asp:HyperLink>
 							</div>
 						</div>
 						<div class="bnr-right"> 

@@ -17,7 +17,7 @@
 		<div class="container"> 
 			<div class="account-bottom">
 				<div class="col-md-6 account-left">
-					<form id="form1" runat="server">
+					
 					<div class="account-top heading">
 						<h3>NEW CUSTOMERS</h3>
 					</div>
@@ -63,7 +63,7 @@
 					<div class="address new">
                         <asp:Button ID="btnDangKi" runat="server" onclick="btnDangKi_Click" Text="Registration" />
 					</div>
-					</form>
+					
 				</div>
 				
 		</div>

@@ -19,7 +19,7 @@
 			<div class="account-bottom">
 				
 				<div class="col-md-6 account-left">
-					<form id="form1" runat="server">
+					
 					<div class="account-top heading">
 						<h3>LOGIN ACCOUNT</h3>
 					</div>
@@ -33,9 +33,9 @@
 					</div>
 					<div class="address">
 						<a class="forgot" href="#">Forgot Your Password?</a>
-                        <asp:Button ID="btnDangNhap" runat="server" Text="Login" OnClick="btnDangNhap_Click" />
+                        <asp:Button ID="btnDangNhap" runat="server" Text="Login"  OnClick="btnDangNhap_Click" />
 					</div>
-                        </form>
+                       
 				</div>
 				
 				<div class="clearfix"> </div>
