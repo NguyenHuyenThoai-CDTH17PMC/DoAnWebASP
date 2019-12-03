@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BUS;
+using DTO;
 
 namespace GUI
 {
@@ -16,6 +17,36 @@ namespace GUI
             {
                 rptSanPham.DataSource = SanPhamBUS.LayDSSanPham();
                 rptSanPham.DataBind();
+            }
+        }
+
+        protected void rptSanPham_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "ThemGH")
+            {
+                HttpCookie cookie = Request.Cookies["TenTK"];
+                if (cookie != null)
+                {
+                    GioHangDTO gh = new GioHangDTO();
+                    gh.TenTaiKhoan = cookie.Value;
+                    gh.MaSP = e.CommandArgument.ToString();
+                    gh.SoLuong = 1;
+
+                    if (GioHangBUS.ThemGH(gh))
+                    {
+
+                        Response.Redirect("GioHang.aspx");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Thêm thất bại')</script>");
+                    }
+                }
+                else 
+                {
+                   
+                    Response.Redirect("DangNhap.aspx");
+                }
             }
         }
     }

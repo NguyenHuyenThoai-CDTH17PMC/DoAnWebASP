@@ -62,14 +62,16 @@
                             <asp:Image ID="imgAnhMinhHoa" runat="server" ImageUrl='<%# "images/" + Eval("AnhMinhHoa") %>' style="width: 180px;margin-left: 60px;margin-top: -40px;"/></a>
 						</li>
 						<li><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></li>
-						<li><asp:Label ID="lblGiaTien" runat="server" Text='<%# Eval("GiaTien") %>'></asp:Label></li>
+						<li><asp:Label ID="lblGiaTien" runat="server" Text='<%# Eval("GiaTien")+"$" %>'></asp:Label></li>
 						<li><asp:Label ID="lblSoLuong" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label></li>
-						<li> <a href="single.html" class="add-cart cart-check">ADD TO CART</a></li>
+                    
 					<div class="clearfix"> </div>
 				</ul>
-                            
+                       
                         </ItemTemplate>
                     </asp:Repeater>
+                <p style="font-size:20px">Tổng tiền: <asp:Label ID="lblTongTien" runat="server"  style="color:red" Text="0"></asp:Label> $
+                <asp:Button ID="btnThanhToan" runat="server" CssClass="btn btn-danger" style="float:right" Text="Thanh toán" onclick="btnThanhToan_Click"/></p>
 			</div>
 			</div>  
 		 </div>

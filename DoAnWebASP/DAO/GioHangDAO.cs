@@ -39,21 +39,29 @@ namespace DAO
             param[2] = new SqlParameter("@SoLuong", gh.SoLuong);
             return DataProvider.ExecuteUpdateQuery(query, param) == 1;
         }
-       /* public static bool XoaGH(GioHangDTO gh)
+       public static bool XoaGH(GioHangDTO gh)
         {
-            string query = "DELETE FROM GioHang  WHERE TenTaiKhoan = @TenTaiKhoan AND MaSP = @MaSP";
+            string query = "DELETE  FROM GIOHANG WHERE TenTaiKhoan = @TenTaiKhoan AND MaSP = @MaSP ";
             SqlParameter[] param = new SqlParameter[2];
             param[0] = new SqlParameter("@TenTaiKhoan", gh.TenTaiKhoan);
             param[1] = new SqlParameter("@MaSP", gh.MaSP);
            
             return DataProvider.ExecuteDeleteQuery(query, param) == 1;
-        }*/
+        }
         public static DataTable LayDSGioHang(string tenTK)
         {
             string query = "SELECT gh.MaSP, TenSP, AnhMinhHoa, GiaTien, SoLuong, GiaTien * SoLuong AS ThanhTien FROM GioHang gh INNER JOIN SanPham SP ON gh.MaSP = SP.MaSP WHERE TenTaiKhoan = @TenTaiKhoan";
             SqlParameter[] param = new SqlParameter[1];
             param[0] = new SqlParameter("@TenTaiKhoan", tenTK);
             return DataProvider.ExecuteSelectQuery(query, param);
+        }
+        public static GioHangDTO ConvertToDTO(DataRow dr)
+        {
+            GioHangDTO gh = new GioHangDTO();
+            gh.TenTaiKhoan = dr["TenTaiKhoan"].ToString();
+            gh.MaSP = dr["MaSP"].ToString();
+            gh.SoLuong = Convert.ToInt32(dr["SoLuong"]);
+            return gh;
         }
     }
 }

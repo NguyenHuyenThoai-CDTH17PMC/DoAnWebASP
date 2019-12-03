@@ -85,7 +85,7 @@
 		<div class="container"> 
 			
 			<div class="product-one">
-                    <asp:Repeater ID="rptSanPham" runat="server">
+                    <asp:Repeater ID="rptSanPham" runat="server" OnItemCommand="rptSanPham_ItemCommand">
                     <ItemTemplate>
 				<div class="col-md-4 product-left single-left"> 
 					<div class="p-one simpleCart_shelfItem">
@@ -96,7 +96,7 @@
 								</div>
 							</asp:HyperLink>
 						<h4><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></h4>
-						<p><a class="item_add" href="#"><i></i>
+						<p><asp:LinkButton ID="btnThemGH" runat="server" CommandName="ThemGH" CommandArgument='<%# Eval("MaSP") %>'><i class=" item_price"></i></asp:LinkButton>
                             <asp:Label ID="lblGiaTien" runat="server" class=" item_price" Text='<%# "$"+Eval("GiaTien") %>'></asp:Label>
 						   </a></p>
 					</div>
