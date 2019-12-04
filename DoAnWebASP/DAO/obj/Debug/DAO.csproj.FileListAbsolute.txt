@@ -5,3 +5,10 @@ E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.dll
 E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.pdb
 E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DTO.dll
 E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DTO.pdb
+D:\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DAO.dll
+D:\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DAO.pdb
+D:\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DTO.dll
+D:\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DTO.pdb
+D:\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.dll
+D:\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.pdb

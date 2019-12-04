@@ -10,7 +10,7 @@
 						<div class="flexslider">
 							<ul class="slides">
 								<li data-thumb="images/s1.jpg">
-									<img src="images/s1.jpg" />
+									<asp:Image ID="imgAnhMinhHoa" runat="server"  />
 								</li>
 								<li data-thumb="images/s2.jpg">
 									<img src="images/s2.jpg" />
@@ -39,47 +39,24 @@
 				</div>	
 				<div class="col-md-7 single-top-right">
 					<div class="details-left-info simpleCart_shelfItem">
-						<h3>Accessories Latest</h3>
+                         <h3><asp:Label ID="lblMaSP" runat="server" ></asp:Label></h3>
+						    <h3><asp:Label ID="lblTenSP" runat="server" ></asp:Label></h3>
 						<p class="availability">Availability: <span class="color">In stock</span></p>
 						<div class="price_single">
 							<span class="reducedfrom">$800.00</span>
-							<span class="actual item_price">$600.00</span><a href="#">click for offer</a>
+							<span class="actual item_price"> <asp:Label ID="lblGia" runat="server" ></asp:Label></span><a href="#">click for offer</a>
 						</div>
 						<h2 class="quick">Quick Overview:</h2>
-						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
-						<ul class="product-colors">
-							<h3>available Colors ::</h3>
-							<li><a class="color1" href="#"><span> </span></a></li>
-							<li><a class="color2" href="#"><span> </span></a></li>
-							<li><a class="color3" href="#"><span> </span></a></li>
-							<li><a class="color4" href="#"><span> </span></a></li>
-							<li><a class="color5" href="#"><span> </span></a></li>
-							<li><a class="color6" href="#"><span> </span></a></li>
-							<li><a class="color7" href="#"><span> </span></a></li>
-							<li><a class="color8" href="#"><span> </span></a></li>
-							<div class="clear"> </div>
-						</ul>
-						<ul class="size">
-							<h3>Length</h3>
-							<li><a href="#">7</a></li>
-							<li><a href="#">6</a></li>
-						</ul>
-						<div class="quantity_box">
-							<ul class="product-qty">
-								<span>Quantity:</span>
-								<select>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-								</select>
-							</ul>
-						</div>
+						<p class="quick_desc"><asp:Label ID="lblThongTin" runat="server" ></asp:Label></p>
+                        <p class="quick_desc">Số lượng</p>			 
+                        <p class="quick_desc"><asp:TextBox ID="txtSoluong" runat="server" TextMode="Number" Text="1"  /></p>
+                        <p class="quick_desc">Số lượng tồn kho còn:</p>	
+                        <p class="quick_desc"><asp:TextBox ID="txtSLTK" runat="server" TextMode="Number" Text="1"  /></p>	
+						<p class="quick_desc">Chọn size:</p>	
+                        <p class="quick_desc"> <asp:DropDownList ID="DropDownList_size" runat="server"></asp:DropDownList></p>
 					<div class="clearfix"> </div>
 				<div class="single-but item_add">
-					<input type="submit" value="add to cart"/>
+					<asp:LinkButton ID="btnADD" runat="server"  OnClick="btnADD_Click" Text="ADD to cart"></asp:LinkButton>
 				</div>
 			</div>
 		</div>
