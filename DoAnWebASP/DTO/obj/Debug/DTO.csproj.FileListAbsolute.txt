@@ -7,4 +7,3 @@ D:\DoAnWebASP\DoAnWebASP\DTO\bin\Debug\DTO.dll
 D:\DoAnWebASP\DoAnWebASP\DTO\bin\Debug\DTO.pdb
 D:\DoAnWebASP\DoAnWebASP\DTO\obj\Debug\DTO.dll
 D:\DoAnWebASP\DoAnWebASP\DTO\obj\Debug\DTO.pdb
-D:\DoAnWebASP\DoAnWebASP\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache

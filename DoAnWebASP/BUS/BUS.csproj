@@ -42,8 +42,10 @@
     <Compile Include="CTHoaDonBUS.cs" />
     <Compile Include="GioHangBUS.cs" />
     <Compile Include="HoaDonBUS.cs" />
+    <Compile Include="LoaiSanPhamBUS.cs" />
     <Compile Include="SanPhamBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SizeGiayBUS.cs" />
     <Compile Include="TaiKhoanBUS.cs" />
   </ItemGroup>
   <ItemGroup>

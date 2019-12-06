@@ -7,22 +7,9 @@
 				<div class="col-md-9 single-main-left">
 				<div class="sngl-top">
 					<div class="col-md-5 single-top-left">	
-						<div class="flexslider">
-							<ul class="slides">
-								<li data-thumb="images/s1.jpg">
 									<asp:Image ID="imgAnhMinhHoa" runat="server"  />
-								</li>
-								<li data-thumb="images/s2.jpg">
-									<img src="images/s2.jpg" />
-								</li>
-								<li data-thumb="images/s3.jpg">
-									<img src="images/s3.jpg" />
-								</li>
-								<li data-thumb="images/s4.jpg">
-									<img src="images/s4.jpg" />
-								</li>
-							</ul>
-						</div>
+                        </div>
+							
 <!-- FlexSlider -->
   <script defer src="js/jquery.flexslider.js"></script>
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
@@ -147,31 +134,22 @@
 					</div>
 				</div>
 				<div class="col-md-3 single-right">
-					<h3>Categories</h3>
+					<h3>Loại Giày</h3>
+                  
 					<ul class="product-categories">
-						<li><a href="#">Blucher Shoe</a> <span class="count">(14)</span></li>
-						<li><a href="#">Clog Shoe</a> <span class="count">(2)</span></li>
-						<li><a href="#">Snow Boot Shoe</a> <span class="count">(2)</span></li>
-						<li><a href="#">Galesh Shoe</a> <span class="count">(11)</span></li>
-						<li><a href="#">pataugas Shoe</a> <span class="count">(3)</span></li>
-						<li><a href="#">Jazz Shoe</a> <span class="count">(3)</span></li>
-					</ul>
-					<h3>Colors</h3>
+                         <asp:Repeater ID="rpt_LoaiGiay" runat="server" OnItemCommand="rpt_LoaiGiay_ItemCommand">
+                             <ItemTemplate>
+						        <li><asp:LinkButton ID="btnXemLoaiGiay" CommandName="XemLoaiGiay" CommandArgument='<%# Eval("TenLoaiSP") %>' runat="server" Text='<%# Eval("TenLoaiSP") %>'></asp:LinkButton></li> 
+                              </ItemTemplate>                   				
+                        </asp:Repeater>
+					</ul>           
+					<h3>Size GIày</h3>
 					<ul class="product-categories">
-						<li><a href="#">Green</a> <span class="count">(14)</span></li>
-						<li><a href="#">Blue</a> <span class="count">(2)</span></li>
-						<li><a href="#">Red</a> <span class="count">(2)</span></li>
-						<li><a href="#">Gray</a> <span class="count">(8)</span></li>
-						<li><a href="#">Green</a> <span class="count">(11)</span></li>
-						<li><a href="#">Yellow</a> <span class="count">(2)</span></li>
-					</ul>
-					<h3>Sizes</h3>
-					<ul class="product-categories">
-						<li><a href="#">5.5</a> <span class="count">(14)</span></li>
-						<li><a href="#">6</a> <span class="count">(2)</span></li>
-						<li><a href="#">6.5</a> <span class="count">(2)</span></li>
-						<li><a href="#">7</a> <span class="count">(8)</span></li>
-						<li><a href="#">7.5</a> <span class="count">(11)</span></li>
+						<asp:Repeater ID="rpt_SizeGiay" runat="server" OnItemCommand="rpt_SizeGiay_ItemCommand">
+                             <ItemTemplate>
+						        <li><asp:LinkButton ID="btnXemLoaiGiay" CommandName="XemLoaiGiay" CommandArgument='<%# Eval("sizenumber") %>' runat="server" Text='<%# Eval("sizenumber") %>'></asp:LinkButton></li> 
+                              </ItemTemplate>                   				
+                        </asp:Repeater>
 					</ul>
 					<h3>Price</h3>
 					<ul class="product-categories p1">

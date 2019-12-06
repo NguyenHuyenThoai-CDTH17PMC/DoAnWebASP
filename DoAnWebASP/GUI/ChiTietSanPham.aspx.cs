@@ -22,10 +22,18 @@ namespace GUI
                 lblMaSP.Text = sp.MaSP;
                 lblGia.Text = sp.GiaTien.ToString();
                 txtSLTK.Text = sp.SoLuongTonKho.ToString();
+
                 DropDownList_size.DataSource = SanPhamBUS.LaySanPhamTheoTheoSise(Request.QueryString["qqq"]);
                 DropDownList_size.DataTextField = "sizenumber";
                 DropDownList_size.DataValueField = "sizenumber";
                 DropDownList_size.DataBind();
+
+                rpt_LoaiGiay.DataSource = LoaiSanPhamBUS.LayDSLoaiSanPham();
+                rpt_LoaiGiay.DataBind();
+
+                rpt_SizeGiay.DataSource = SizeGiayBUS.LayDSSize();
+                rpt_SizeGiay.DataBind();
+
             }
 
         }
@@ -69,6 +77,16 @@ namespace GUI
             {
                 Response.Redirect("DangNhap.aspx");
             }
+        }
+
+        protected void rpt_LoaiGiay_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
+
+        protected void rpt_SizeGiay_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
         }
     }
 }
