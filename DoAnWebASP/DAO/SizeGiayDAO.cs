@@ -13,7 +13,7 @@ namespace DAO
     {
         public static List<SizeGiayDTO> LayDSSize()
         {
-            string query = "SELECT DISTINCT sizenumber FROM SizeGiay";
+            string query = "SELECT DISTINCT  sizenumber FROM SizeGiay";
             SqlParameter[] param = new SqlParameter[0];
             DataTable dtbKetQua = DataProvider.ExecuteSelectQuery(query, param);
             List<SizeGiayDTO> lstSizeGiay = new List<SizeGiayDTO>();
@@ -23,11 +23,13 @@ namespace DAO
             }
             return lstSizeGiay;
         }
+     
         public static SizeGiayDTO ConvertToDTO(DataRow dr)
         {
             SizeGiayDTO sg = new SizeGiayDTO();
-            sg.Sizenumber= dr["sizenumber"].ToString();   
+            sg.Sizenumber = dr["sizenumber"].ToString();
             return sg;
         }
+      
     }
 }

@@ -36,13 +36,6 @@ namespace DTO
             get { return giaTien; }
             set { giaTien = value; }
         }
-        private int soLuongTonKho;
-
-        public int SoLuongTonKho
-        {
-            get { return soLuongTonKho; }
-            set { soLuongTonKho = value; }
-        }
         private string maLoaiSP;
 
         public string MaLoaiSP
@@ -70,7 +63,6 @@ namespace DTO
         public SanPhamDTO()
         {
             GiaTien = 0;
-            SoLuongTonKho = 0;
             TrangThai = true;
         }
     }

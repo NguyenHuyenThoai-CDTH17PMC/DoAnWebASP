@@ -50,6 +50,7 @@
 					<li><span>Product Name</span></li>		
 					<li><span>Unit Price</span></li>
 					<li><span>Amount</span></li>
+                    <li><span>Size</span></li>
 					<li> </li>
 					<div class="clearfix"> </div>
 				</ul>
@@ -64,6 +65,7 @@
 						<li><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></li>
 						<li><asp:Label ID="lblGiaTien" runat="server" Text='<%# Eval("GiaTien")+"$" %>'></asp:Label></li>
 						<li><asp:Label ID="lblSoLuong" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label></li>
+                        <li><asp:Label ID="lblSize" runat="server" Text='<%# Eval("sizenumber") %>'></asp:Label></li>
                     
 					<div class="clearfix"> </div>
 				</ul>

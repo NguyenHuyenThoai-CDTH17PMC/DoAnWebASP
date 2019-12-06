@@ -38,9 +38,9 @@
                         <p class="quick_desc">Số lượng</p>			 
                         <p class="quick_desc"><asp:TextBox ID="txtSoluong" runat="server" TextMode="Number" Text="1"  /></p>
                         <p class="quick_desc">Số lượng tồn kho còn:</p>	
-                        <p class="quick_desc"><asp:TextBox ID="txtSLTK" runat="server" TextMode="Number" Text="1"  /></p>	
+                        <p class="quick_desc"><asp:Label ID="lblSLTK" runat="server" ></asp:Label></p>	
 						<p class="quick_desc">Chọn size:</p>	
-                        <p class="quick_desc"> <asp:DropDownList ID="DropDownList_size" runat="server"></asp:DropDownList></p>
+                        <p class="quick_desc"> <asp:DropDownList ID="DropDownList_size" AutoPostBack="true" OnSelectedIndexChanged="DropDownList_size_SelectedIndexChanged" runat="server" ></asp:DropDownList></p>
 					<div class="clearfix"> </div>
 				<div class="single-but item_add">
 					<asp:LinkButton ID="btnADD" runat="server"  OnClick="btnADD_Click" Text="ADD to cart"></asp:LinkButton>

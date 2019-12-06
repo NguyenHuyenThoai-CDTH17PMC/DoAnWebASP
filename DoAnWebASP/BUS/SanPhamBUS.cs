@@ -19,16 +19,16 @@ namespace BUS
         {
             return SanPhamDAO.LaySanPhamTheoMaSp(masp);
         }
-        public static DataTable LaySanPhamTheoTheoSise(string masp)
+        public static List<SizeGiayDTO> LaySanPhamTheoTheoSise(string masp)
         {
 
             return SanPhamDAO.LaySanPhamTheoTheoSise(masp);
         }
-        public static bool CapNhatSoLuongTonKho(string masp, int soluongconlai)
+        public static bool CapNhatSoLuongTonKho(string masp, string SizeGiay, int soluongdamua)
         {
-            if (SanPhamDAO.CapNhatTonkho(masp, soluongconlai))
+            if (SanPhamDAO.CapNhatTonkho(masp, SizeGiay, soluongdamua))
             {
-                return SanPhamDAO.CapNhatTonkho(masp, soluongconlai);
+                return SanPhamDAO.CapNhatTonkho(masp, SizeGiay, soluongdamua);
             }
             {
                 return false;

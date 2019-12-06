@@ -8,6 +8,13 @@ namespace DTO
 {
     public class SizeGiayDTO
     {
+        private int id;
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         private string sizenumber;
 
         public string Sizenumber
@@ -21,6 +28,13 @@ namespace DTO
         {
             get { return masp_id; }
             set { masp_id = value; }
+        }
+        private int soluongtonkho;
+
+        public int Soluongtonkho
+        {
+            get { return soluongtonkho; }
+            set { soluongtonkho = value; }
         }
     }
 }

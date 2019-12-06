@@ -27,7 +27,7 @@ namespace GUI
                 {
                     DataTable dtbKetQua = GioHangBUS.LayDSGioHang(tenTK);
                     rptGioHang.DataSource = dtbKetQua;
-                     rptGioHang.DataBind();
+                    rptGioHang.DataBind();
                     lblTongTien.Text = GioHangBUS.TinhTongTienGH(tenTK).ToString();
                 }
             }
@@ -57,16 +57,34 @@ namespace GUI
                 hd.TongTien = GioHangBUS.TinhTongTienGH(tenTK);
                 hd.MaHD = HoaDonBUS.ThemHD(hd);
                 DataTable dtbKetQua = GioHangBUS.LayDSGioHang(tenTK);
+
                 foreach (DataRow dr in dtbKetQua.Rows)
                 {
+                    
                     CTHoaDonDTO cthd = new CTHoaDonDTO();
                     cthd.MaHD = hd.MaHD;
                     cthd.MaSP = dr["MaSP"].ToString();
                     cthd.SoLuong = Convert.ToInt32(dr["SoLuong"]);
                     cthd.DonGia = Convert.ToInt32(dr["GiaTien"]);
                     CTHoaDonBUS.ThemCTHD(cthd);
+
+                   
+
+                    GioHangDTO gh = new GioHangDTO();
+                    gh.TenTaiKhoan=tenTK;
+                    gh.MaSP = dr["MaSP"].ToString();
+                    gh.SoLuong =Convert.ToInt32(dr["SoLuong"]);
+                    gh.SizeGiay = dr["sizenumber"].ToString();  
+                    GioHangBUS.XoaGH(gh);
+
+                    SanPhamBUS.CapNhatSoLuongTonKho(gh.MaSP,gh.SizeGiay,gh.SoLuong);
+    
                 }
-               // GioHangBUS.XoaGH(gh);
+
+                
+                Response.Redirect("GioHang.aspx");
+ 
+             
             }
         }
     }
