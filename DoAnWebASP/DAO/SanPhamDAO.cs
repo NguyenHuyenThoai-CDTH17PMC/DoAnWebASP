@@ -28,7 +28,6 @@ namespace DAO
             sp.TenSP = dr["TenSP"].ToString();
             sp.ThongTin = dr["ThongTin"].ToString();
             sp.GiaTien = Convert.ToInt32(dr["GiaTien"]);
-            sp.SoLuongTonKho = Convert.ToInt32(dr["SoLuongTonKho"]);
             sp.MaLoaiSP = dr["MaLoaiSP"].ToString();
             sp.AnhMinhHoa = dr["AnhMinhHoa"].ToString();
             sp.TrangThai = Convert.ToBoolean(dr["TrangThai"]);
