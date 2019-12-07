@@ -22,7 +22,7 @@ namespace GUI
                 lblThongTin.Text = sp.ThongTin;
                 lblMaSP.Text = sp.MaSP;
                 lblGia.Text = sp.GiaTien.ToString();
-
+                lblMaSP.Visible = false;
                
 
                 DropDownList_size.DataSource = SanPhamBUS.LaySanPhamTheoTheoSise(Request.QueryString["qqq"]);
@@ -96,6 +96,11 @@ namespace GUI
         {
 
             lblSLTK.Text = DropDownList_size.SelectedValue;
+        }
+
+        protected void btnADD_Click1(object sender, EventArgs e)
+        {
+
         }
 
        

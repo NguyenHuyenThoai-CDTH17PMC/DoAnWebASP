@@ -31,24 +31,49 @@
 						<p class="availability">Availability: <span class="color">In stock</span></p>
 						<div class="price_single">
 							<span class="reducedfrom">$800.00</span>
-							<span class="actual item_price"> <asp:Label ID="lblGia" runat="server" ></asp:Label></span><a href="#">click for offer</a>
+							<span class="actual item_price">$<asp:Label ID="lblGia" runat="server" ></asp:Label></span>
 						</div>
 						<h2 class="quick">Quick Overview:</h2>
-						<p class="quick_desc"><asp:Label ID="lblThongTin" runat="server" ></asp:Label></p>
-                        <p class="quick_desc">Số lượng</p>			 
-                        <p class="quick_desc"><asp:TextBox ID="txtSoluong" runat="server" TextMode="Number" Text="1"  /></p>
-                        <p class="quick_desc">Số lượng tồn kho còn:</p>	
-                        <p class="quick_desc"><asp:Label ID="lblSLTK" runat="server" ></asp:Label></p>	
-						<p class="quick_desc">Chọn size:</p>	
-                        <p class="quick_desc"> <asp:DropDownList ID="DropDownList_size" AutoPostBack="true" OnSelectedIndexChanged="DropDownList_size_SelectedIndexChanged" runat="server" ></asp:DropDownList></p>
+						<p class="quick_desc"><asp:Label ID="lblThongTin" runat="server" ></asp:Label></p>		 
+                        <p class="quick_desc" style="color: #666;">Amount: <asp:TextBox ID="txtSoluong" runat="server" TextMode="Number" Text="1" style="width:45px" /></p>
+                        <p class="quick_desc" style="color: #666;">Residual amount: <asp:Label ID="lblSLTK" runat="server" ></asp:Label></p>		
+                        <p class="quick_desc" style="color: #666;">Size: <asp:DropDownList ID="DropDownList_size"  AutoPostBack="true" OnSelectedIndexChanged="DropDownList_size_SelectedIndexChanged" runat="server" ></asp:DropDownList></p>
 					<div class="clearfix"> </div>
 				<div class="single-but item_add">
-					<asp:LinkButton ID="btnADD" runat="server"  OnClick="btnADD_Click" Text="ADD to cart"></asp:LinkButton>
+                    <asp:Button ID="btnADD" runat="server" OnClick="btnADD_Click" Text="Add to card" />
+					
 				</div>
 			</div>
 		</div>
 		<div class="clearfix"></div>
 	</div>
+                <div class="col-md-3 single-right">
+					<h3>Species</h3>
+					<ul class="product-categories">
+                         <asp:Repeater ID="rpt_LoaiGiay" runat="server" OnItemCommand="rpt_LoaiGiay_ItemCommand">
+                             <ItemTemplate>
+						        <li><asp:LinkButton ID="btnXemLoaiGiay" CommandName="XemLoaiGiay" CommandArgument='<%# Eval("TenLoaiSP") %>' runat="server" Text='<%# Eval("TenLoaiSP") %>'></asp:LinkButton></li> 
+                              </ItemTemplate>                   				
+                        </asp:Repeater>
+					</ul>           
+					<h3>Size</h3>
+					<ul class="product-categories">
+						<asp:Repeater ID="rpt_SizeGiay" runat="server" OnItemCommand="rpt_SizeGiay_ItemCommand">
+                             <ItemTemplate>
+						        <li><asp:LinkButton ID="btnXemLoaiGiay" CommandName="XemLoaiGiay" CommandArgument='<%# Eval("sizenumber") %>' runat="server" Text='<%# Eval("sizenumber") %>'></asp:LinkButton></li> 
+                              </ItemTemplate>                   				
+                        </asp:Repeater>
+					</ul>
+					<h3>Price</h3>
+					<ul class="product-categories p1">
+						<li><a href="#">600$-700$</a> <span class="count">(14)</span></li>
+						<li><a href="#">700$-800$</a> <span class="count">(2)</span></li>
+						<li><a href="#">800$-900$</a> <span class="count">(2)</span></li>
+						<li><a href="#">900$-1000$</a> <span class="count">(8)</span></li>
+						<li><a href="#">1000$-1100$</a> <span class="count">(11)</span></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
 					<div class="latest products">
 						<div class="product-one">
 							<div class="col-md-4 product-left single-left"> 
@@ -133,36 +158,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 single-right">
-					<h3>Loại Giày</h3>
-                  
-					<ul class="product-categories">
-                         <asp:Repeater ID="rpt_LoaiGiay" runat="server" OnItemCommand="rpt_LoaiGiay_ItemCommand">
-                             <ItemTemplate>
-						        <li><asp:LinkButton ID="btnXemLoaiGiay" CommandName="XemLoaiGiay" CommandArgument='<%# Eval("TenLoaiSP") %>' runat="server" Text='<%# Eval("TenLoaiSP") %>'></asp:LinkButton></li> 
-                              </ItemTemplate>                   				
-                        </asp:Repeater>
-					</ul>           
-					<h3>Size GIày</h3>
-					<ul class="product-categories">
-						<asp:Repeater ID="rpt_SizeGiay" runat="server" OnItemCommand="rpt_SizeGiay_ItemCommand">
-                             <ItemTemplate>
-						        <li><asp:LinkButton ID="btnXemLoaiGiay" CommandName="XemLoaiGiay" CommandArgument='<%# Eval("sizenumber") %>' runat="server" Text='<%# Eval("sizenumber") %>'></asp:LinkButton></li> 
-                              </ItemTemplate>                   				
-                        </asp:Repeater>
-					</ul>
-					<h3>Price</h3>
-					<ul class="product-categories p1">
-						<li><a href="#">600$-700$</a> <span class="count">(14)</span></li>
-						<li><a href="#">700$-800$</a> <span class="count">(2)</span></li>
-						<li><a href="#">800$-900$</a> <span class="count">(2)</span></li>
-						<li><a href="#">900$-1000$</a> <span class="count">(8)</span></li>
-						<li><a href="#">1000$-1100$</a> <span class="count">(11)</span></li>
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
+				
 			</div>
 		</div>
-	</div>
 	<!--end-single-->
 </asp:Content>
