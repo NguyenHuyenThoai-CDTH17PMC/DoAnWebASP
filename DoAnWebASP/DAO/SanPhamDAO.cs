@@ -34,22 +34,28 @@ namespace DAO
             return sp;
 
         }
-        public static DataTable LaySanPhamTheoTheoSise(string masp)
+        public static List<SizeGiayDTO> LaySanPhamTheoTheoSise(string masp)
         {
-            string query = "select sizenumber from SanPham sp,SizeGiay sz where sz.masp_id=sp.MaSP and sp.MaSP=@masp";
+            string query = "select sizenumber,SoLuongTonKho from SanPham sp,SizeGiay sz where sz.masp_id=sp.MaSP and sp.MaSP=@masp";
             SqlParameter[] param = new SqlParameter[1];
             param[0] = new SqlParameter("@masp", masp);
-            return DataProvider.ExecuteSelectQuery(query, param);
+            DataTable dtbKetQua = DataProvider.ExecuteSelectQuery(query, param);
+            List<SizeGiayDTO> lstSizeGiay = new List<SizeGiayDTO>();
+            foreach (DataRow dr in dtbKetQua.Rows)
+            {
+                lstSizeGiay.Add(ConvertToDTOSizeGiayDTO(dr));
+            }
+            return lstSizeGiay;
 
 
         }
-        public static bool CapNhatTonkho(string masp, int soluongconlai)
+        public static bool CapNhatTonkho(string masp,string SizeGiay, int soluongdamua)
         {
-            string query = "UPDATE SANPHAM SET SoLuongTonKho=@sltonkho where MaSP=@masp";
-            SqlParameter[] param = new SqlParameter[2];
-            param[0] = new SqlParameter("masp", masp);
-            param[1] = new SqlParameter("@sltonkho", soluongconlai);
-
+            string query = "UPDATE SizeGiay SET SoLuongTonKho=SoLuongTonKho - @sltonkho where masp_id=@masp and sizenumber=@sizenumber";
+            SqlParameter[] param = new SqlParameter[3];
+            param[0] = new SqlParameter("@masp", masp);
+            param[1] = new SqlParameter("@sizenumber",SizeGiay);
+            param[2] = new SqlParameter("@sltonkho", soluongdamua);
 
             return DataProvider.ExecuteUpdateQuery(query, param) == 1;
         }
@@ -60,11 +66,17 @@ namespace DAO
             sp.TenSP = dr["TenSP"].ToString();
             sp.ThongTin = dr["ThongTin"].ToString();
             sp.GiaTien = Convert.ToInt32(dr["GiaTien"]);
-            sp.SoLuongTonKho = Convert.ToInt32(dr["SoLuongTonKho"]);
             sp.MaLoaiSP = dr["MaLoaiSP"].ToString();
             sp.AnhMinhHoa = dr["AnhMinhHoa"].ToString();
             sp.TrangThai = Convert.ToBoolean(dr["TrangThai"]);
             return sp;
+        }
+        public static SizeGiayDTO ConvertToDTOSizeGiayDTO(DataRow dr)
+        {
+            SizeGiayDTO sz = new SizeGiayDTO();
+            sz.Sizenumber = dr["sizenumber"].ToString();
+            sz.Soluongtonkho = Convert.ToInt32(dr["SoLuongTonKho"]);
+            return sz;
         }
     }
 }

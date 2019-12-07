@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using BUS;
 using DTO;
 
@@ -21,12 +22,15 @@ namespace GUI
                 lblThongTin.Text = sp.ThongTin;
                 lblMaSP.Text = sp.MaSP;
                 lblGia.Text = sp.GiaTien.ToString();
-                txtSLTK.Text = sp.SoLuongTonKho.ToString();
+
+               
 
                 DropDownList_size.DataSource = SanPhamBUS.LaySanPhamTheoTheoSise(Request.QueryString["qqq"]);
                 DropDownList_size.DataTextField = "sizenumber";
-                DropDownList_size.DataValueField = "sizenumber";
+                DropDownList_size.DataValueField = "SoLuongTonKho";
                 DropDownList_size.DataBind();
+
+                lblSLTK.Text = DropDownList_size.Items[0].Value.ToString();
 
                 rpt_LoaiGiay.DataSource = LoaiSanPhamBUS.LayDSLoaiSanPham();
                 rpt_LoaiGiay.DataBind();
@@ -50,9 +54,8 @@ namespace GUI
                 gh.SizeGiay = DropDownList_size.SelectedItem.Text;
                 gh.SoLuong = Convert.ToInt32(txtSoluong.Text);
 
-                int soluongtonkho = Convert.ToInt32(txtSLTK.Text);
 
-                if (gh.SoLuong > soluongtonkho)
+                if (gh.SoLuong >Convert.ToInt32(lblSLTK.Text))
                 {
                     Response.Write("<script>alert('Thêm thất bại')</script>");
                 }
@@ -60,7 +63,7 @@ namespace GUI
                 else if (GioHangBUS.ThemGH(gh))
                 {
 
-                    SanPhamBUS.CapNhatSoLuongTonKho(gh.MaSP, soluongtonkho - gh.SoLuong);
+                  
                     Response.Redirect("GioHang.aspx");
                 }
                 else
@@ -88,5 +91,13 @@ namespace GUI
         {
 
         }
+
+        protected void DropDownList_size_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            lblSLTK.Text = DropDownList_size.SelectedValue;
+        }
+
+       
     }
 }
