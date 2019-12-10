@@ -28,7 +28,7 @@ namespace BUS
         {
             if (SanPhamDAO.CapNhatTonkho(masp, SizeGiay, soluongdamua))
             {
-                return SanPhamDAO.CapNhatTonkho(masp, SizeGiay, soluongdamua);
+                return true;
             }
             {
                 return false;

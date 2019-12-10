@@ -18,7 +18,7 @@
 		<div class="container">
 			<div class="ckeckout-top">
 			<div class=" cart-items heading">
-			 <h3>My Shopping Bag (3)</h3>
+			 <h3>My Shopping Bag</h3>
 				<script>$(document).ready(function (c) {
     $('.close1').on('click', function (c) {
         $('.cart-header').fadeOut('slow', function (c) {
@@ -46,11 +46,11 @@
 				
 			<div class="in-check" >
 				<ul class="unit">
-					<li style="margin-left: 70px;"><span>Item</span></li>
+					<li><span>Item</span></li>
 					<li><span>Product Name</span></li>		
 					<li><span>Unit Price</span></li>
-					<li><span>Amount</span></li>
-                    <li><span>Size</span></li>
+					<li><span>Size</span></li>
+                    <li><span>Amount</span></li>
 					<li> </li>
 					<div class="clearfix"> </div>
 				</ul>
@@ -64,16 +64,16 @@
 						</li>
 						<li><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></li>
 						<li><asp:Label ID="lblGiaTien" runat="server" Text='<%# Eval("GiaTien")+"$" %>'></asp:Label></li>
-						<li><asp:Label ID="lblSoLuong" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label></li>
                         <li><asp:Label ID="lblSize" runat="server" Text='<%# Eval("sizenumber") %>'></asp:Label></li>
+						<li><asp:Label ID="lblSoLuong" runat="server" Text='<%# Eval("SoLuong") %>'></asp:Label></li>
                     
 					<div class="clearfix"> </div>
 				</ul>
                        
                         </ItemTemplate>
                     </asp:Repeater>
-                <p style="font-size:20px">Tổng tiền: <asp:Label ID="lblTongTien" runat="server"  style="color:red" Text="0"></asp:Label> $
-                <asp:Button ID="btnThanhToan" runat="server" CssClass="btn btn-danger" style="float:right" Text="Thanh toán" onclick="btnThanhToan_Click"/></p>
+                <p style="font-size:20px">Total: <asp:Label ID="lblTongTien" runat="server"  style="color:red" Text="0"></asp:Label> $
+                <asp:Button ID="btnThanhToan" runat="server" CssClass="btn btn-primary" style="float:right" Text="Pay now" onclick="btnThanhToan_Click"/></p>
 			</div>
 			</div>  
 		 </div>
