@@ -28,7 +28,9 @@ namespace GUI
 
             if (TaiKhoanBUS.ThemTK(tk))
             {
+               
                 Response.Write("<script>alert('Đăng kí thành công')</script>");
+                
             }
             else
             {

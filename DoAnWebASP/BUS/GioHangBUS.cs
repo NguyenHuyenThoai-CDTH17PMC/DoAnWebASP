@@ -26,6 +26,21 @@ namespace BUS
         {
             return GioHangDAO.LayDSGioHang(tenTk);
         }
+        public static int TinhTongTienGH(string tenTK)
+        {
+            DataTable dtbKetQua = GioHangDAO.LayDSGioHang(tenTK);
+            int tongTien = 0;
+            foreach (DataRow dr in dtbKetQua.Rows)
+            {
+                tongTien += Convert.ToInt32(dr["ThanhTien"]);
+            }
+            return tongTien;
+        }
+        public static bool XoaGH(GioHangDTO gh)
+        {
+
+            return GioHangDAO.XoaGH(gh);       
+        }
         
     }
 }

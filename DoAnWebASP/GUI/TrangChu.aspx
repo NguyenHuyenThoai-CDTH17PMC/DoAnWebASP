@@ -85,19 +85,18 @@
 		<div class="container"> 
 			
 			<div class="product-one">
-                    <asp:Repeater ID="rptSanPham" runat="server">
+                    <asp:Repeater ID="rptSanPham" runat="server" OnItemCommand="rptSanPham_ItemCommand">
                     <ItemTemplate>
 				<div class="col-md-4 product-left single-left"> 
 					<div class="p-one simpleCart_shelfItem">
-						<asp:HyperLink ID="hplXemChiTiet" runat="server" NavigateUrl='<%# "ChiTietSanPham.aspx" %>' >
+						<asp:HyperLink ID="hplXemChiTiet" runat="server" NavigateUrl='<%#"ChiTietSanPham.aspx?qqq="+Eval("MaSP")%>' >
 								 <asp:Image ID="imgAnhMinhHoa" runat="server" ImageUrl='<%# "images/" + Eval("AnhMinhHoa") %>' />
 								<div class="mask mask1">
 									<span>Quick View</span>
 								</div>
 							</asp:HyperLink>
 						<h4><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></h4>
-						<p><a class="item_add" href="#"><i></i>
-                            <asp:Label ID="lblGiaTien" runat="server" class=" item_price" Text='<%# "$"+Eval("GiaTien") %>'></asp:Label>
+						<p><asp:Label ID="lblGiaTien" runat="server" class=" item_price" Text='<%# "$"+Eval("GiaTien") %>'></asp:Label>
 						   </a></p>
 					</div>
 				</div>

@@ -10,3 +10,15 @@ E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\GUI\bin\DTO.dll
 E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\GUI\bin\DAO.dll
 E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\GUI\bin\DTO.pdb
 E:\DALTWebASPNet\DoAnWebASP\DoAnWebASP\GUI\bin\DAO.pdb
+D:\DoAnWebASP\DoAnWebASP\GUI\bin\GUI.dll.config
+D:\DoAnWebASP\DoAnWebASP\GUI\bin\GUI.dll
+D:\DoAnWebASP\DoAnWebASP\GUI\bin\GUI.pdb
+D:\DoAnWebASP\DoAnWebASP\GUI\bin\BUS.dll
+D:\DoAnWebASP\DoAnWebASP\GUI\bin\DTO.dll
+D:\DoAnWebASP\DoAnWebASP\GUI\bin\DAO.dll
+D:\DoAnWebASP\DoAnWebASP\GUI\bin\BUS.pdb
+D:\DoAnWebASP\DoAnWebASP\GUI\bin\DTO.pdb
+D:\DoAnWebASP\DoAnWebASP\GUI\bin\DAO.pdb
+D:\DoAnWebASP\DoAnWebASP\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\DoAnWebASP\DoAnWebASP\GUI\obj\Debug\GUI.dll
+D:\DoAnWebASP\DoAnWebASP\GUI\obj\Debug\GUI.pdb

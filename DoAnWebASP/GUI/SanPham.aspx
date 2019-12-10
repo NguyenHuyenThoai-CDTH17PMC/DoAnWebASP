@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="breadcrumbs-main">
 				<ol class="breadcrumb">
-					<li><a href="index.html">Home</a></li>
+					<li><asp:HyperLink ID="hblTrangChu" runat="server" NavigateUrl="~/TrangChu.aspx">Home</asp:HyperLink></li>
 					<li class="active">New Products</li>
 				</ol>
 			</div>
@@ -31,8 +31,7 @@
 								</div>
 							</asp:HyperLink>
 						<h4><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></h4>
-						<p><asp:LinkButton ID="btnThemGH" runat="server" CommandName="ThemGH" CommandArgument='<%# Eval("MaSP") %>'><i class=" item_price"></i></asp:LinkButton>
-                            <asp:Label ID="lblGiaTien"  runat="server" class=" item_price" Text='<%# "$"+Eval("GiaTien") %>'></asp:Label>
+						<p> <asp:Label ID="lblGiaTien"  runat="server" class=" item_price" Text='<%# "$"+Eval("GiaTien") %>'></asp:Label>
 						   </p>
 					</div>
 				</div>

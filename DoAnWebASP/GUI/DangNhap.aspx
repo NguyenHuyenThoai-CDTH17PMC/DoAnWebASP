@@ -6,7 +6,7 @@
 		<div class="container">
 			<div class="breadcrumbs-main">
 				<ol class="breadcrumb">
-					<li><a href="index.html">Home</a></li>
+					<li><asp:HyperLink ID="hblTrangChu" runat="server" NavigateUrl="~/TrangChu.aspx">Home</asp:HyperLink></li>
 					<li class="active">Account</li>
 				</ol>
 			</div>

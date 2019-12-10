@@ -22,6 +22,13 @@ namespace DTO
             get { return maSP; }
             set { maSP = value; }
         }
+        private string sizeGiay;
+
+        public string SizeGiay
+        {
+            get { return sizeGiay; }
+            set { sizeGiay = value; }
+        }
         private int soLuong;
 
         public int SoLuong

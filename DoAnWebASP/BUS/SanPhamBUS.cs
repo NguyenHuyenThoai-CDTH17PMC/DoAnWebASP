@@ -15,5 +15,24 @@ namespace BUS
         {
             return SanPhamDAO.LayDSSanPham();
         }
+        public static SanPhamDTO LaySanPhamTheoMaSp(string masp)
+        {
+            return SanPhamDAO.LaySanPhamTheoMaSp(masp);
+        }
+        public static List<SizeGiayDTO> LaySanPhamTheoTheoSise(string masp)
+        {
+
+            return SanPhamDAO.LaySanPhamTheoTheoSise(masp);
+        }
+        public static bool CapNhatSoLuongTonKho(string masp, string SizeGiay, int soluongdamua)
+        {
+            if (SanPhamDAO.CapNhatTonkho(masp, SizeGiay, soluongdamua))
+            {
+                return true;
+            }
+            {
+                return false;
+            }
+        }
     }
 }
