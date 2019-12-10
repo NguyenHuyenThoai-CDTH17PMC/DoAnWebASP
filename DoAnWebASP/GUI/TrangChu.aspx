@@ -96,8 +96,7 @@
 								</div>
 							</asp:HyperLink>
 						<h4><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></h4>
-						<p><asp:LinkButton ID="btnThemGH" runat="server" CommandName="ThemGH" CommandArgument='<%# Eval("MaSP") %>'><i class=" item_price"></i></asp:LinkButton>
-                            <asp:Label ID="lblGiaTien" runat="server" class=" item_price" Text='<%# "$"+Eval("GiaTien") %>'></asp:Label>
+						<p><asp:Label ID="lblGiaTien" runat="server" class=" item_price" Text='<%# "$"+Eval("GiaTien") %>'></asp:Label>
 						   </a></p>
 					</div>
 				</div>
