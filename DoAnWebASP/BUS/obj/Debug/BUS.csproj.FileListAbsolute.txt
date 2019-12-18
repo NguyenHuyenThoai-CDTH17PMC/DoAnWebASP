@@ -16,3 +16,12 @@ D:\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\DTO.pdb
 D:\DoAnWebASP\DoAnWebASP\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 D:\DoAnWebASP\DoAnWebASP\BUS\obj\Debug\BUS.dll
 D:\DoAnWebASP\DoAnWebASP\BUS\obj\Debug\BUS.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\BUS.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\BUS.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\DAO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\DTO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\DAO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\obj\Debug\BUS.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\obj\Debug\BUS.pdb

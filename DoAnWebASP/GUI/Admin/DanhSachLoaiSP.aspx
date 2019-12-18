@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/MasterAdmin.Master" AutoEventWireup="true" CodeBehind="DanhSachLoaiSP.aspx.cs" Inherits="GUI.Admin.DanhSachLoaiSP" %>
+﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" MasterPageFile="~/Admin/Master.Master" AutoEventWireup="true" CodeBehind="DanhSachLoaiSP.aspx.cs" Inherits="GUI.Admin.DanhSachLoaiSP" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -6,20 +6,29 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
+                                    <div class="form-group">
+                                        <label>Mã SP</label>
+                                        <asp:TextBox ID="txtid" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <label>Tên Loại Sản Phẩm</label>
+                                        <asp:TextBox ID="txttenloai" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" style="color:#ff0000" ControlToValidate="txttenloai" ErrorMessage="Không được bỏ trống" Display="Dynamic"></asp:RequiredFieldValidator><br />
+                                    </div>
+                                    <asp:Button ID="btnThemMoi" runat="server" CssClass="btn btn-info width-md waves-effect waves-light" Text="Thêm Mới" OnClick="btnThemMoi_Click"/>
+                                    <asp:Button ID="btnCapNhat" runat="server" CssClass="btn btn-secondary waves-effect" Text="Cập Nhật" OnClick="btnCapNhat_Click"/>
+                                    <asp:Button ID="btnXoa" runat="server" CssClass="btn btn-success waves-effect waves-light" Text="Xóa" OnClick="btnXoa_Click"/>
+                                  <hr width="30%" align="center"/>
                                 <h4 class="header-title">Danh sách sản phẩm</h4>
-                                <a href=""><button class="btn btn-primary waves-effect waves-light" type="button">Thêm mới</button></a>
-                                <a href=""><button class="btn btn-primary waves-effect waves-light" type="button">Thùng rác</button></a>
-                                <table id="basic-datatable" class="table dt-responsive nowrap">
+                                <table id="basic-datatable" class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>Mã Loại</th>
-                                            <th>Tên Loại Sản Phẩm</th>
-                                            <th>Trạng Thái</th>
-                                            <th> Cập Nhật | Xóa </th>                        
+                                            <th scope="col">Mã Loại</th>
+                                            <th scope="col">Tên Loại Sản Phẩm</th>
+                                            <th scope="col">Trạng Thái</th>
+                                            <th scope="col"> Cập Nhật</th>                   
                                         </tr>
                                     </thead> 
                                     <tbody>
-                                        <asp:Repeater ID="rptSanPham" runat="server">
+                                        <asp:Repeater ID="rptSanPham" runat="server" OnItemCommand="btncapnhat">
                                         <ItemTemplate>
                                         <tr>
                                             <td>
@@ -32,8 +41,7 @@
                                                 <asp:Label ID="Label5" runat="server" Text='<%# Eval("TrangThai") %>'></asp:Label>
                                             </td>
                                             <td>
-                                                 <a href=""><button class="btn btn-purple waves-effect waves-light" type="button"><i class=" mdi mdi-pencil-outline"></i></button></a>
-                                                 <a href=""><button class="btn btn-danger waves-effect waves-light" type="button"><i class=" mdi mdi-close"></i></button></a>  
+                                                 <asp:Button ID="btnChon" runat="server" CssClass="btn btn-info waves-effect waves-light" CausesValidation="False" CommandName="ChonTK" Text="Chọn" CommandArgument='<%# Eval("MaLoaiSP") %>'/>
                                             </td>
                                         </tr>
                                             </ItemTemplate>

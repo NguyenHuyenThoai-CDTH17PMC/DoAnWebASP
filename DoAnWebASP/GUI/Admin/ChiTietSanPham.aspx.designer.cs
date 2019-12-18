@@ -10,70 +10,70 @@
 namespace GUI.Admin {
     
     
-    public partial class ThemSP {
+    public partial class ChiTietSanPham {
         
         /// <summary>
-        /// form2 control.
+        /// txtid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
+        protected global::System.Web.UI.WebControls.TextBox txtid;
         
         /// <summary>
-        /// txtTenSP control.
+        /// txtmasp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenSP;
+        protected global::System.Web.UI.WebControls.TextBox txtmasp;
         
         /// <summary>
-        /// txtThongTin control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtThongTin;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// txtGiaTien control.
+        /// txtsoluong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGiaTien;
+        protected global::System.Web.UI.WebControls.TextBox txtsoluong;
         
         /// <summary>
-        /// ddlSanPham control.
+        /// RequiredFieldValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSanPham;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
-        /// imgHinhSanPham control.
+        /// txtsize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload imgHinhSanPham;
+        protected global::System.Web.UI.WebControls.TextBox txtsize;
         
         /// <summary>
-        /// txtSLTonKho control.
+        /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSLTonKho;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// btnThemMoi control.
@@ -83,5 +83,32 @@ namespace GUI.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnThemMoi;
+        
+        /// <summary>
+        /// btnCapNhat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCapNhat;
+        
+        /// <summary>
+        /// btnXoa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnXoa;
+        
+        /// <summary>
+        /// rptChiTietSanPham control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptChiTietSanPham;
     }
 }
