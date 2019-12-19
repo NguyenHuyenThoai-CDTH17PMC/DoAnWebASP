@@ -30,6 +30,8 @@ namespace GUI
             {
                
                 Response.Write("<script>alert('Đăng kí thành công')</script>");
+              
+                
                 
             }
             else

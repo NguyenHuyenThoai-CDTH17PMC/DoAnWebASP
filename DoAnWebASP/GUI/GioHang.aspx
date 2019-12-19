@@ -58,9 +58,9 @@
                     <ItemTemplate>
                          
 				<ul class="cart-header">
-					<div> <asp:LinkButton ID="btnXoaGH" runat="server" CssClass="btn" OnClick="btnXoaGH_Click" style="font-size: 45px;margin-left: -5px;margin-bottom: -123px;"><i class="fa fa-trash"></i></asp:LinkButton></div>
+					
 						<li class="ring-in"><a href="single.html" >
-                            <asp:Image ID="imgAnhMinhHoa" runat="server" ImageUrl='<%# "images/" + Eval("AnhMinhHoa") %>' style="width: 180px;margin-left: 60px;margin-top: -40px;"/></a>
+                            <asp:Image ID="imgAnhMinhHoa" runat="server" ImageUrl='<%# "images/" + Eval("AnhMinhHoa") %>' style="width: 180px;"/></a>
 						</li>
 						<li><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></li>
 						<li><asp:Label ID="lblGiaTien" runat="server" Text='<%# Eval("GiaTien")+"$" %>'></asp:Label></li>

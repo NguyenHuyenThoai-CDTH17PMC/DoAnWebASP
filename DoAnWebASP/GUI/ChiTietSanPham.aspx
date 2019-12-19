@@ -7,7 +7,7 @@
 				<div class="col-md-9 single-main-left">
 				<div class="sngl-top">
 					<div class="col-md-5 single-top-left">	
-									<asp:Image ID="imgAnhMinhHoa" runat="server"  />
+									<asp:Image ID="imgAnhMinhHoa"  runat="server" style="height:320px" />
                         </div>
 							
 <!-- FlexSlider -->
@@ -35,7 +35,7 @@
 						</div>
 						<h2 class="quick">Quick Overview:</h2>
 						<p class="quick_desc"><asp:Label ID="lblThongTin" runat="server" ></asp:Label></p>		 
-                        <p class="quick_desc" style="color: #666;">Amount: <asp:TextBox ID="txtSoluong" runat="server" TextMode="Number" Text="1" style="width:45px" /></p>
+                        <p class="quick_desc" style="color: #666;">Amount: <asp:TextBox ID="txtSoluong" runat="server" TextMode="Number" min="1" Text="1" style="width:45px" /></p>
                         <p class="quick_desc" style="color: #666;">Residual amount: <asp:Label ID="lblSLTK" runat="server" ></asp:Label></p>		
                         <p class="quick_desc" style="color: #666;">Size: <asp:DropDownList ID="DropDownList_size"  AutoPostBack="true" OnSelectedIndexChanged="DropDownList_size_SelectedIndexChanged" runat="server" ></asp:DropDownList></p>
 					<div class="clearfix"> </div>

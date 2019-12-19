@@ -88,9 +88,9 @@
                     <asp:Repeater ID="rptSanPham" runat="server" OnItemCommand="rptSanPham_ItemCommand">
                     <ItemTemplate>
 				<div class="col-md-4 product-left single-left"> 
-					<div class="p-one simpleCart_shelfItem">
+					<div class="p-one simpleCart_shelfItem" style="padding: 1px">
 						<asp:HyperLink ID="hplXemChiTiet" runat="server" NavigateUrl='<%#"ChiTietSanPham.aspx?qqq="+Eval("MaSP")%>' >
-								 <asp:Image ID="imgAnhMinhHoa" runat="server" ImageUrl='<%# "images/" + Eval("AnhMinhHoa") %>' />
+								 <asp:Image ID="imgAnhMinhHoa"  runat="server"  ImageUrl='<%# "images/" + Eval("AnhMinhHoa") %>' />
 								<div class="mask mask1">
 									<span>Quick View</span>
 								</div>
