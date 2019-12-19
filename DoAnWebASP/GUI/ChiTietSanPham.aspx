@@ -52,7 +52,7 @@
 					<ul class="product-categories">
                          <asp:Repeater ID="rpt_LoaiGiay" runat="server" OnItemCommand="rpt_LoaiGiay_ItemCommand">
                              <ItemTemplate>
-						        <li><asp:LinkButton ID="btnXemLoaiGiay" CommandName="XemLoaiGiay" CommandArgument='<%# Eval("TenLoaiSP") %>' runat="server" Text='<%# Eval("TenLoaiSP") %>'></asp:LinkButton></li> 
+						        <li><asp:LinkButton ID="btnXemLoaiGiay"  CommandName="XemGiayTheoTenLoai" CommandArgument='<%# Eval("TenLoaiSP") %>' runat="server" Text='<%# Eval("TenLoaiSP") %>' ></asp:LinkButton></li>
                               </ItemTemplate>                   				
                         </asp:Repeater>
 					</ul>           
@@ -60,101 +60,39 @@
 					<ul class="product-categories">
 						<asp:Repeater ID="rpt_SizeGiay" runat="server" OnItemCommand="rpt_SizeGiay_ItemCommand">
                              <ItemTemplate>
-						        <li><asp:LinkButton ID="btnXemLoaiGiay" CommandName="XemLoaiGiay" CommandArgument='<%# Eval("sizenumber") %>' runat="server" Text='<%# Eval("sizenumber") %>'></asp:LinkButton></li> 
+						        <li><asp:LinkButton ID="btnXemLoaiGiay" CommandName="XemGiayTheoSize" CommandArgument='<%# Eval("sizenumber") %>' runat="server" Text='<%# Eval("sizenumber") %>'></asp:LinkButton></li> 
                               </ItemTemplate>                   				
                         </asp:Repeater>
 					</ul>
 					<h3>Price</h3>
 					<ul class="product-categories p1">
-						<li><a href="#">600$-700$</a> <span class="count">(14)</span></li>
-						<li><a href="#">700$-800$</a> <span class="count">(2)</span></li>
-						<li><a href="#">800$-900$</a> <span class="count">(2)</span></li>
-						<li><a href="#">900$-1000$</a> <span class="count">(8)</span></li>
-						<li><a href="#">1000$-1100$</a> <span class="count">(11)</span></li>
+						<li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="SanPham.aspx?Sort=LOW_TO_HIGH">LOW TO HIGH PRICES</asp:HyperLink> </li>
+                        <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="SanPham.aspx?Sort=HIGH_TO_LOW">HIGH TO LOW PRICES</asp:HyperLink> </li> 
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
-					<div class="latest products">
+					<div class="latest products">	
 						<div class="product-one">
-							<div class="col-md-4 product-left single-left"> 
-								<div class="p-one simpleCart_shelfItem">
-									
-									<a href="#">
-								<img src="images/shoes-1.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-									<h4>Aenean placerat</h4>
-									<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-									
-								</div>
-							</div>
-							<div class="col-md-4 product-left single-left"> 
-								<div class="p-one simpleCart_shelfItem">
-									<a href="#">
-								<img src="images/shoes-2.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-									<h4>Aenean placerat</h4>
-									<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-									
-								</div>
-							</div>
-							<div class="col-md-4 product-left single-left"> 
-								<div class="p-one simpleCart_shelfItem">
-									<a href="#">
-								<img src="images/shoes-3.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-									<h4>Aenean placerat</h4>
-									<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>									
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="product-one">
-							<div class="col-md-4 product-left single-left"> 
-								<div class="p-one simpleCart_shelfItem">
-									<a href="#">
-								<img src="images/shoes-13.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-									<h4>Aenean placerat</h4>
-									<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>									
-								</div>
-							</div>
-							<div class="col-md-4 product-left single-left"> 
-								<div class="p-one simpleCart_shelfItem">
-									<a href="#">
-								<img src="images/shoes-5.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-							</a>
-									<h4>Aenean placerat</h4>
-									<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>									
-								</div>
-							</div>
-							<div class="col-md-4 product-left single-left"> 
-								<div class="p-one simpleCart_shelfItem">
-									<a href="#">
-								<img src="images/shoes-6.png" alt="" />
-								<div class="mask mask1">
-									<span>Quick View</span>
-								</div>
-								</a>
-									<h4>Aenean placerat</h4>
-									<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>				
-								</div>
-							</div>
-							<div class="clearfix"> </div>
+                            <asp:Repeater ID="rpt_spcungloai" runat="server">
+                                <ItemTemplate>
+                                  	<div class="col-md-4 product-left single-left"> 
+					                    <div class="p-one simpleCart_shelfItem" style="padding: 1px">
+						                    <asp:HyperLink ID="hplXemChiTiet" runat="server" NavigateUrl='<%#"ChiTietSanPham.aspx?qqq="+Eval("MaSP")%>' >
+								                     <asp:Image ID="imgAnhMinhHoa"  runat="server"  ImageUrl='<%# "images/" + Eval("AnhMinhHoa") %>' />
+								                    <div class="mask mask1">
+									                    <span>Quick View</span>
+								                    </div>
+							                    </asp:HyperLink>
+						                    <h4><asp:Label ID="lblTenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label></h4>
+						                    <p><asp:Label ID="lblGiaTien" runat="server" class=" item_price" Text='<%# "$"+Eval("GiaTien") %>'></asp:Label>
+						                       </a></p>
+					                    </div>
+				                    </div>
+                                    
+                                </ItemTemplate>
+                            </asp:Repeater>
+							
+							
 						</div>
 					</div>
 				</div>

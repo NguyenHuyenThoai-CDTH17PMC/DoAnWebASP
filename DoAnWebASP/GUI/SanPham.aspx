@@ -44,39 +44,26 @@
 			</div>
         
 			<div class="col-md-3 p-right single-right">
-				<h3>Categories</h3>
-					<ul class="product-categories">
-						<li><a href="#">Blucher Shoe</a> <span class="count">(14)</span></li>
-						<li><a href="#">Clog Shoe</a> <span class="count">(2)</span></li>
-						<li><a href="#">Snow Boot Shoe</a> <span class="count">(2)</span></li>
-						<li><a href="#">Galesh Shoe</a> <span class="count">(11)</span></li>
-						<li><a href="#">pataugas Shoe</a> <span class="count">(3)</span></li>
-						<li><a href="#">Jazz Shoe</a> <span class="count">(3)</span></li>
-					</ul>
-					<h3>Colors</h3>
-					<ul class="product-categories">
-						<li><a href="#">Green</a> <span class="count">(14)</span></li>
-						<li><a href="#">Blue</a> <span class="count">(2)</span></li>
-						<li><a href="#">Red</a> <span class="count">(2)</span></li>
-						<li><a href="#">Gray</a> <span class="count">(8)</span></li>
-						<li><a href="#">Green</a> <span class="count">(11)</span></li>
-						<li><a href="#">Yellow</a> <span class="count">(2)</span></li>
-					</ul>
+				<h3>SPECIES</h3>
+				<ul class="product-categories">
+                         <asp:Repeater ID="rpt_LoaiGiay" runat="server" OnItemCommand="rpt_LoaiGiay_ItemCommand">
+                             <ItemTemplate>
+						        <li><asp:LinkButton ID="btnXemLoaiGiay"  CommandName="XemGiayTheoTenLoai" CommandArgument='<%# Eval("TenLoaiSP") %>' runat="server" Text='<%# Eval("TenLoaiSP") %>' ></asp:LinkButton></li>
+                              </ItemTemplate>                   				
+                        </asp:Repeater>
+					</ul>    
 					<h3>Sizes</h3>
-					<ul class="product-categories">
-						<li><a href="#">5.5</a> <span class="count">(14)</span></li>
-						<li><a href="#">6</a> <span class="count">(2)</span></li>
-						<li><a href="#">6.5</a> <span class="count">(2)</span></li>
-						<li><a href="#">7</a> <span class="count">(8)</span></li>
-						<li><a href="#">7.5</a> <span class="count">(11)</span></li>
+						<ul class="product-categories">
+						<asp:Repeater ID="rpt_SizeGiay" runat="server" OnItemCommand="rpt_SizeGiay_ItemCommand">
+                             <ItemTemplate>
+						        <li><asp:LinkButton ID="btnXemLoaiGiay" CommandName="XemGiayTheoSize" CommandArgument='<%# Eval("sizenumber") %>' runat="server" Text='<%# Eval("sizenumber") %>'></asp:LinkButton></li> 
+                              </ItemTemplate>                   				
+                        </asp:Repeater>
 					</ul>
 					<h3>Price</h3>
 					<ul class="product-categories p1">
-						<li><a href="#">600$-700$</a> <span class="count">(14)</span></li>
-						<li><a href="#">700$-800$</a> <span class="count">(2)</span></li>
-						<li><a href="#">800$-900$</a> <span class="count">(2)</span></li>
-						<li><a href="#">900$-1000$</a> <span class="count">(8)</span></li>
-						<li><a href="#">1000$-1100$</a> <span class="count">(11)</span></li>
+						<li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="SanPham.aspx?Sort=LOW_TO_HIGH">LOW TO HIGH PRICES</asp:HyperLink> </li>
+                        <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="SanPham.aspx?Sort=HIGH_TO_LOW">HIGH TO LOW PRICES</asp:HyperLink> </li> 
 					</ul>
 			</div>
 			<div class="clearfix"> </div>

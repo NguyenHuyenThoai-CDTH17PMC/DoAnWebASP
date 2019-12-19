@@ -153,6 +153,19 @@ namespace DAO
             sp.TrangThai = Convert.ToBoolean(dr["TrangThai"]);
             return sp;
         }
+        public static List<SanPhamDTO> LaySanPhamCungLoaiTrongTrangChiTiet(string maloaisp)
+        {
+            string query = "select*from sanpham sp,loaisanpham lsp where sp.MaLoaiSP=lsp.MaLoaiSP and  lsp.maloaisp=@maloaisp";
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@maloaisp", maloaisp);
+            DataTable tbketqua = DataProvider.ExecuteSelectQuery(query, param);
+            List<SanPhamDTO> list = new List<SanPhamDTO>();
+            foreach (DataRow dr in tbketqua.Rows)
+            {
+                list.Add(ConvertToDTO(dr));
+            }
+            return list;
+        }
         public static SizeGiayDTO ConvertToDTOSizeGiayDTO(DataRow dr)
         {
             SizeGiayDTO sz = new SizeGiayDTO();
@@ -167,5 +180,69 @@ namespace DAO
             sp.SoLuongTonKho = dr["SoLuongTonKho"].ToString();
             return sp;
         }
+        //Chức năng Tìm kiếm
+        public static List<SanPhamDTO> XemGiayTheoTenLoai(string tenloaisp)
+        {
+            string query = "select*from sanpham sp,loaisanpham lsp where sp.MaLoaiSP=lsp.MaLoaiSP and  lsp.TenLoaiSP=@tenloaisp";
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@tenloaisp", tenloaisp);
+            DataTable tbketqua = DataProvider.ExecuteSelectQuery(query, param);
+            List<SanPhamDTO>list=new List<SanPhamDTO>();
+            foreach(DataRow dr in tbketqua.Rows)
+            {
+                list.Add(ConvertToDTO(dr));
+            }
+            return list;
+        }
+        public static List<SanPhamDTO> XemGiayTheoSize(string sizenumber)
+        {
+            string query = "select sp.MaSP,sp.TenSP,sp.ThongTin,sp.GiaTien,sp.MaLoaiSP,sp.AnhMinhHoa,sp.TrangThai from SanPham sp,SizeGiay sz where sp.masp=sz.masp_id and sz.sizenumber=@sizenumber";
+            SqlParameter[]param=new SqlParameter[1];
+            param[0]=new SqlParameter("@sizenumber",sizenumber);
+            DataTable tbketqua = DataProvider.ExecuteSelectQuery(query, param);
+            List<SanPhamDTO>list=new List<SanPhamDTO>();
+            foreach (DataRow dr in tbketqua.Rows)
+            {
+                list.Add(ConvertToDTO(dr));
+            }
+            return list;
+        }
+        public static List<SanPhamDTO> XemTheoGiaTuThapDenCao()
+        {
+            string query = "select*from sanpham ORDER BY giatien ASC";
+            SqlParameter[] param = new SqlParameter[0];
+            List<SanPhamDTO> list = new List<SanPhamDTO>();
+            DataTable tbketqua = DataProvider.ExecuteSelectQuery(query, param);
+            foreach(DataRow dr in tbketqua.Rows)
+            {
+                list.Add(ConvertToDTO(dr));
+            }
+            return list;
+        }
+        public static List<SanPhamDTO> XemTheoGiaTuCaoDenThap()
+        {
+            string query = "select*from sanpham ORDER BY giatien DESC";
+            SqlParameter[] param = new SqlParameter[0];
+            List<SanPhamDTO> list = new List<SanPhamDTO>();
+            DataTable tbketqua = DataProvider.ExecuteSelectQuery(query, param);
+            foreach (DataRow dr in tbketqua.Rows)
+            {
+                list.Add(ConvertToDTO(dr));
+            }
+            return list;
+        }
+        public static List<SanPhamDTO> TimKiemNguoiDungNhap(string tukhoa)
+        {
+            string query = "select*from sanpham where tensp LIKE '%" +tukhoa+ "%'";
+            SqlParameter[] param = new SqlParameter[0];
+            DataTable tbketqua = DataProvider.ExecuteSelectQuery(query, param);
+            List<SanPhamDTO> list = new List<SanPhamDTO>();
+            foreach (DataRow dr in tbketqua.Rows)
+            {
+                list.Add(ConvertToDTO(dr));
+            }
+            return list;
+        }
+        
     }
 }

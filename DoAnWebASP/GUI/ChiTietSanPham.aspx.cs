@@ -38,6 +38,9 @@ namespace GUI
                 rpt_SizeGiay.DataSource = SizeGiayBUS.LayDSSize();
                 rpt_SizeGiay.DataBind();
 
+                rpt_spcungloai.DataSource = SanPhamBUS.LaySanPhamCungLoaiTrongTrangChiTiet(sp.MaLoaiSP);
+                rpt_spcungloai.DataBind();
+
             }
 
         }
@@ -84,12 +87,36 @@ namespace GUI
 
         protected void rpt_LoaiGiay_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-
+          if (e.CommandName == "XemGiayTheoTenLoai")
+          {
+              string tenloaisp = e.CommandArgument.ToString();
+              List<SanPhamDTO> list = SanPhamBUS.XemGiayTheoTenLoai(tenloaisp);
+              if(list!=null)
+              {
+                  Response.Redirect("SanPham.aspx?TenLoai=" +tenloaisp);
+              }
+              else
+              {
+                  Response.Write("XEM KHÔNG ĐƯỢC");
+              }
+          }
         }
 
         protected void rpt_SizeGiay_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-
+            if (e.CommandName == "XemGiayTheoSize")
+            {
+                string sizenumber = e.CommandArgument.ToString();
+                List<SanPhamDTO> list = SanPhamBUS.XemGiayTheoSize(sizenumber);
+                if (list != null)
+                {
+                    Response.Redirect("SanPham.aspx?Size=" + sizenumber);
+                }
+                else
+                {
+                    Response.Write("XEM KHÔNG ĐƯỢC");
+                }
+            }
         }
 
         protected void DropDownList_size_SelectedIndexChanged(object sender, EventArgs e)

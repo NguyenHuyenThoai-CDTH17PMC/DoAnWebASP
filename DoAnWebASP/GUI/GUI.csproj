@@ -274,16 +274,10 @@
     <Content Include="Admin\assets\libs\treeview\jstree.min.js" />
     <Content Include="Admin\assets\libs\treeview\style.css" />
     <Content Include="Admin\assets\libs\twitter-bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
-<<<<<<< HEAD
-    <Content Include="Admin\CapNhatSP.aspx" />
     <Content Include="Admin\DanhSachLoaiSP.aspx" />
-    <Content Include="Admin\ThemSP.aspx" />
-=======
     <Content Include="Admin\ChiTietSanPham.aspx" />
-    <Content Include="Admin\DanhSachLoaiSP.aspx" />
     <Content Include="Admin\DanhSachSP.aspx" />
     <Content Include="Admin\DSTaiKhoan.aspx" />
->>>>>>> 93325a3cde3b9530f55e6ff6c4b31dda621fdec2
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="MasterPage.Master" />
     <Content Include="Admin\assets\css\app-rtl.min.css.map" />
@@ -330,11 +324,7 @@
     <Content Include="Admin\assets\fonts\summernote.woff" />
     <Content Include="Admin\assets\js\app.min.js.map" />
     <Content Include="Admin\assets\js\vendor.min.js.map" />
-<<<<<<< HEAD
-    <Content Include="Admin\MasterAdmin.Master" />
-=======
     <Content Include="Admin\Master.Master" />
->>>>>>> 93325a3cde3b9530f55e6ff6c4b31dda621fdec2
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -401,21 +391,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Admin\CapNhatSP.aspx.cs">
-      <DependentUpon>CapNhatSP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\CapNhatSP.aspx.designer.cs">
-      <DependentUpon>CapNhatSP.aspx</DependentUpon>
-=======
     <Compile Include="Admin\ChiTietSanPham.aspx.cs">
       <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ChiTietSanPham.aspx.designer.cs">
       <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
->>>>>>> 93325a3cde3b9530f55e6ff6c4b31dda621fdec2
     </Compile>
     <Compile Include="Admin\DanhSachLoaiSP.aspx.cs">
       <DependentUpon>DanhSachLoaiSP.aspx</DependentUpon>
@@ -424,28 +405,10 @@
     <Compile Include="Admin\DanhSachLoaiSP.aspx.designer.cs">
       <DependentUpon>DanhSachLoaiSP.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Admin\DanhSachSP.aspx.designer.cs" />
-    <Compile Include="Admin\MasterAdmin.Master.cs">
-      <DependentUpon>MasterAdmin.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\MasterAdmin.Master.designer.cs">
-      <DependentUpon>MasterAdmin.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\ThemSP.aspx.cs">
-      <DependentUpon>ThemSP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\ThemSP.aspx.designer.cs">
-      <DependentUpon>ThemSP.aspx</DependentUpon>
-=======
     <Compile Include="Admin\DanhSachSP.aspx.cs">
       <DependentUpon>DanhSachSP.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\DanhSachSP.aspx.designer.cs">
-      <DependentUpon>DanhSachSP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\DSTaiKhoan.aspx.cs">
       <DependentUpon>DSTaiKhoan.aspx</DependentUpon>
@@ -460,7 +423,6 @@
     </Compile>
     <Compile Include="Admin\Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
->>>>>>> 93325a3cde3b9530f55e6ff6c4b31dda621fdec2
     </Compile>
     <Compile Include="ChiTietSanPham.aspx.cs">
       <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
