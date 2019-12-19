@@ -21,24 +21,7 @@ namespace GUI.Admin
         }
         protected void btnThemMoi_Click1(object sender, EventArgs e)
         {
-            string sTenfile;
-            sTenfile = imgHinhSanPham.FileName;
-            imgHinhSanPham.SaveAs(MapPath("../images/" + sTenfile));
-            SanPhamDTO sp = new SanPhamDTO();
-            sp.TenSP = txtTenSP.Text;
-            sp.ThongTin = txtThongTin.Text;
-            sp.GiaTien = txtGiaTien.Text;
-            sp.SoLuongTonKho =txtSLTonKho.Text;
-            sp.MaLoaiSp = ddlSanPham.SelectedValue.ToString();
-            sp.AnhMinhHoa = sTenfile.ToString();
-            if (SanPhamBUS.ThemSP(sp))
-            {
-                Response.Write("<script>alert('Thêm mới sản phẩm thành công!')</script>");
-            }
-            else
-            {
-                Response.Write("<script>alert('Thêm mới sản phẩm thất bại!')</script>");
-            }
+            
           
         }
 
