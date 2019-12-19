@@ -17,6 +17,88 @@ namespace DAO
             SqlParameter[] param = new SqlParameter[0];
             return DataProvider.ExecuteSelectQuery(query, param);
         }
+        //new
+        public static SanPhamDTO LayDSSanPhamCapNhat(string masp)
+        {
+            string query = "SELECT * FROM SanPham  WHERE MaSP=@ID";
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@ID", masp);
+            return ConvertToDTO(DataProvider.ExecuteSelectQuery(query, param).Rows[0]);
+        }
+        public static DataTable LayDSChiTietSanPham(string masp)
+        {
+            string query = "SELECT * FROM SizeGiay WHERE masp_id=@ID ";
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@ID", masp);
+            return DataProvider.ExecuteSelectQuery(query, param);
+        }
+        public static SanPhamDTO LayDSChiTietSanPhamID(string masp)
+        {
+            string query = "SELECT * FROM SizeGiay WHERE ID=@ID ORDER BY sizenumber ASC";
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@ID", masp);
+            return ConvertToDTOsize(DataProvider.ExecuteSelectQuery(query, param).Rows[0]);
+        }
+        public static bool ThemSp(SanPhamDTO sp)
+        {
+            string query = "INSERT INTO dbo.SanPham(MaSP,TenSP,ThongTin,GiaTien,MaLoaiSP,AnhMinhHoa,TrangThai) VALUES (@MaSP,@TenSP,@ThongTin,@GiaTien,@MaLoaiSP,@AnhMinhHoa,@TrangThai)";
+            SqlParameter[] param = new SqlParameter[7];
+            param[0] = new SqlParameter("@TenSP", sp.TenSP);
+            param[1] = new SqlParameter("@ThongTin", sp.ThongTin);
+            param[2] = new SqlParameter("@GiaTien", sp.GiaTien);
+            param[3] = new SqlParameter("@MaLoaiSP", sp.MaLoaiSp);
+            param[4] = new SqlParameter("@AnhMinhHoa", sp.AnhMinhHoa);
+            param[5] = new SqlParameter("@TrangThai", sp.TrangThai);
+            param[6] = new SqlParameter("@MaSP", sp.MaSP);
+            return DataProvider.ExecuteInsertQuery(query, param) == 1;
+        }
+        public static bool CapNhatSp(SanPhamDTO sp, string id)
+        {
+            string query = "UPDATE dbo.SanPham SET TenSP=@TenSP,ThongTin=@ThongTin,GiaTien=@GiaTien,MaLoaiSP=@MaLoaiSP,AnhMinhHoa=@AnhMinhHoa,TrangThai=@TrangThai WHERE MASP=@ID";
+            SqlParameter[] param = new SqlParameter[7];
+            param[0] = new SqlParameter("@TenSP", sp.TenSP);
+            param[1] = new SqlParameter("@ThongTin", sp.ThongTin);
+            param[2] = new SqlParameter("@GiaTien", sp.GiaTien);
+            param[3] = new SqlParameter("@MaLoaiSP", sp.MaLoaiSp);
+            param[4] = new SqlParameter("@AnhMinhHoa", sp.AnhMinhHoa);
+            param[5] = new SqlParameter("@TrangThai", sp.TrangThai);
+            param[6] = new SqlParameter("@ID", id);
+            return DataProvider.ExecuteUpdateQuery(query, param) == 1;
+        }
+        public static bool XoaSP(string id)
+        {
+            string query = "UPDATE dbo.SanPham SET TrangThai=0 WHERE MASP=@ID";
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@ID", id);
+            return DataProvider.ExecuteUpdateQuery(query, param) == 1;
+        }
+        public static bool ThemCTSP(SanPhamDTO sp)
+        {
+            string query = "INSERT INTO dbo.SizeGiay (Masp_id,SoLuongTonKho,Sizenumber) VALUES (@Masp_id,@SoLuongTonKho,@Sizenumber)";
+            SqlParameter[] param = new SqlParameter[3];
+            param[0] = new SqlParameter("@SoLuongTonKho", sp.SoLuongTonKho);
+            param[1] = new SqlParameter("@Sizenumber", sp.Sizenumber);
+            param[2] = new SqlParameter("@Masp_id", sp.Masp_id);
+            return DataProvider.ExecuteInsertQuery(query, param) == 1;
+        }
+        public static bool CapNhatCTSP(SanPhamDTO sp, string id)
+        {
+            string query = "UPDATE dbo.SizeGiay SET Masp_id=@Masp_id,SoLuongTonKho=@SoLuongTonKho,sizenumber=@Sizenumber WHERE id=@ID";
+            SqlParameter[] param = new SqlParameter[4];
+            param[0] = new SqlParameter("@SoLuongTonKho", sp.SoLuongTonKho);
+            param[1] = new SqlParameter("@Sizenumber", sp.Sizenumber);
+            param[2] = new SqlParameter("@Masp_id", sp.Masp_id);
+            param[3] = new SqlParameter("@ID", id);
+            return DataProvider.ExecuteUpdateQuery(query, param) == 1;
+        }
+        public static bool XoaCTSP(string masp)
+        {
+            string query = "DELETE FROM SizeGiay WHERE ID=@ID";
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@ID", masp);
+            return DataProvider.ExecuteDeleteQuery(query, param) == 1;
+        }
+        //endnew
         public static SanPhamDTO LaySanPhamTheoMaSp(string masp)
         {
             string query = "SELECT * FROM SanPham WHERE MaSP = @MaSP";
@@ -77,6 +159,13 @@ namespace DAO
             sz.Sizenumber = dr["sizenumber"].ToString();
             sz.Soluongtonkho = Convert.ToInt32(dr["SoLuongTonKho"]);
             return sz;
+        }
+        public static SanPhamDTO ConvertToDTOsize(DataRow dr)
+        {
+            SanPhamDTO sp = new SanPhamDTO();
+            sp.Sizenumber = dr["sizenumber"].ToString();
+            sp.SoLuongTonKho = dr["SoLuongTonKho"].ToString();
+            return sp;
         }
     }
 }

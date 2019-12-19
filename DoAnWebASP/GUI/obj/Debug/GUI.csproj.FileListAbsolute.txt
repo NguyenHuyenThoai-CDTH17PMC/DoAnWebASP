@@ -22,3 +22,15 @@ D:\DoAnWebASP\DoAnWebASP\GUI\bin\DAO.pdb
 D:\DoAnWebASP\DoAnWebASP\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
 D:\DoAnWebASP\DoAnWebASP\GUI\obj\Debug\GUI.dll
 D:\DoAnWebASP\DoAnWebASP\GUI\obj\Debug\GUI.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\GUI.dll.config
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\GUI.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\GUI.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\BUS.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\DTO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\DAO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\BUS.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\DTO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\DAO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\obj\Debug\GUI.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\obj\Debug\GUI.pdb

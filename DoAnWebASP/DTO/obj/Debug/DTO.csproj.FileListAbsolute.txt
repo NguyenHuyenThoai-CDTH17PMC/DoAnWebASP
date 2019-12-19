@@ -8,3 +8,8 @@ D:\DoAnWebASP\DoAnWebASP\DTO\bin\Debug\DTO.pdb
 D:\DoAnWebASP\DoAnWebASP\DTO\obj\Debug\DTO.dll
 D:\DoAnWebASP\DoAnWebASP\DTO\obj\Debug\DTO.pdb
 D:\DoAnWebASP\DoAnWebASP\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DTO\bin\Debug\DTO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DTO\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DTO\obj\Debug\DTO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DTO\obj\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache

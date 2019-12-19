@@ -10,19 +10,25 @@ namespace DAO
 {
     public class TaiKhoanDAO
     {
-        public static List<TaiKhoanDTO> LayDSTaiKhoan()
+        public static DataTable LayDSTaiKhoan()
         {
             string query = "SELECT * FROM TaiKhoan";
             SqlParameter[] param = new SqlParameter[0];
-            DataTable dtbTaiKhoan = DataProvider.ExecuteSelectQuery(query, param);
-            List<TaiKhoanDTO> lstTaiKhoan = new List<TaiKhoanDTO>();
-            foreach (DataRow dr in dtbTaiKhoan.Rows)
-            {
-                lstTaiKhoan.Add(ConvertToDTO(dr));
-            }
-            return lstTaiKhoan;
+            return DataProvider.ExecuteSelectQuery(query, param);      
         }
-
+        public static List<TaiKhoanDTO> LayDSTaiKhoanX(string loaitaikhoan)
+        {
+            string query = "SELECT * FROM TaiKhoan WHERE LaAdmin = @loaitaikhoan";
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@loaitaikhoan", loaitaikhoan);
+            DataTable dtbKetQua = DataProvider.ExecuteSelectQuery(query, param);
+            List<TaiKhoanDTO> lstSanPham = new List<TaiKhoanDTO>();
+            foreach (DataRow dr in dtbKetQua.Rows)
+            {
+                lstSanPham.Add(ConvertToDTO(dr));
+            }
+            return lstSanPham;      
+        }
         public static TaiKhoanDTO LayThongTinTaiKhoan(string tenTK)
         {
             string query = "SELECT * FROM TaiKhoan WHERE TenTaiKhoan = @TenTaiKhoan";
@@ -62,8 +68,7 @@ namespace DAO
             param[8] = new SqlParameter("@TrangThai", tk.TrangThai);
             return DataProvider.ExecuteInsertQuery(query, param) == 1;
         }
-
-       /* public static bool SuaTK(TaiKhoanDTO tk)
+        public static bool SuaTK(TaiKhoanDTO tk)
         {
             string query = "UPDATE TaiKhoan SET MatKhau = @MatKhau, Email = @Email, SDT = @SDT, DiaChi = @DiaChi, HoTen = @HoTen, LaAdmin = @LaAdmin, AnhDaiDien = @AnhDaiDien, TrangThai = @TrangThai WHERE TenTaiKhoan = @TenTaiKhoan";
             SqlParameter[] param = new SqlParameter[9];
@@ -78,7 +83,6 @@ namespace DAO
             param[8] = new SqlParameter("@TrangThai", tk.TrangThai);
             return DataProvider.ExecuteUpdateQuery(query, param) == 1;
         }
-        
         public static bool XoaTK(string tenTK)
         {
             string query = "UPDATE TaiKhoan SET TrangThai = 0 WHERE TenTaiKhoan = @TenTaiKhoan";
@@ -86,7 +90,6 @@ namespace DAO
             param[0] = new SqlParameter("@TenTaiKhoan", tenTK);
             return DataProvider.ExecuteUpdateQuery(query, param) == 1;
         }
-        */
         public static TaiKhoanDTO ConvertToDTO(DataRow dr)
         {
             TaiKhoanDTO tk = new TaiKhoanDTO();
