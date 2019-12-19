@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace GUI.Admin
 {
-    public partial class CapNhatSP : System.Web.UI.Page
+    public partial class Master : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
