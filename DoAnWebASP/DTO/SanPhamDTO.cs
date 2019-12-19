@@ -58,8 +58,41 @@ namespace DTO
             set { trangThai = value; }
         }
 
+        private String maLoaiSp;
 
+        public String MaLoaiSp
+        {
+            get { return maLoaiSp; }
+            set { maLoaiSp = value; }
+        }
+        private String soLuongTonKho;
 
+        public String SoLuongTonKho
+        {
+            get { return soLuongTonKho; }
+            set { soLuongTonKho = value; }
+        }
+        private String sizenumber;
+
+        public String Sizenumber
+        {
+            get { return sizenumber; }
+            set { sizenumber = value; }
+        }
+        private String masp_id;
+
+        public String Masp_id
+        {
+            get { return masp_id; }
+            set { masp_id = value; }
+        }
+        private String iD;
+
+        public String ID
+        {
+            get { return iD; }
+            set { iD = value; }
+        }
         public SanPhamDTO()
         {
             GiaTien = 0;

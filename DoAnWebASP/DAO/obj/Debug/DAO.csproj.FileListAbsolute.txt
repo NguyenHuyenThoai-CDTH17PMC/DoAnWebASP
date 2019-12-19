@@ -12,3 +12,10 @@ D:\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DTO.pdb
 D:\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 D:\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.dll
 D:\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DAO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DAO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DTO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DAO\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DAO\obj\Debug\DAO.pdb

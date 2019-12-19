@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
 using DTO;
 using DAO;
 
@@ -10,11 +12,14 @@ namespace BUS
 {
    public class TaiKhoanBUS
     {
-        public static List<TaiKhoanDTO> LayDSTaiKhoan()
+        public static DataTable LayDSTaiKhoan()
         {
             return TaiKhoanDAO.LayDSTaiKhoan();
         }
-
+        public static List<TaiKhoanDTO> LayDSSanPham(string maLoaiSP)
+        {
+            return TaiKhoanDAO.LayDSTaiKhoanX(maLoaiSP);
+        }
         public static TaiKhoanDTO LayThongTinTaiKhoan(string tenTK)
         {
             if (!TaiKhoanDAO.KTTKTonTai(tenTK))
@@ -51,7 +56,7 @@ namespace BUS
             }
         }
 
-        /*public static bool SuaTK(TaiKhoanDTO tk)
+        public static bool SuaTK(TaiKhoanDTO tk)
         {
             if (!TaiKhoanDAO.KTTKTonTai(tk.TenTaiKhoan))
             {
@@ -73,6 +78,6 @@ namespace BUS
             {
                 return TaiKhoanDAO.XoaTK(tenTK);
             }
-        }*/
+        }
     }
 }
