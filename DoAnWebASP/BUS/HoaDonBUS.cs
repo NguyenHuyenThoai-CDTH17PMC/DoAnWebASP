@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using DAO;
 using DTO;
 
@@ -11,6 +12,14 @@ namespace BUS
 {
      public class HoaDonBUS
     {
+         public static DataTable LayDSHoaDon()
+         {
+             return HoaDonDAO.LayDSHoaDon();
+         }
+         public static bool UpdateTrangThai(string id)
+         {
+             return HoaDonDAO.UpdateTrangThai(id);
+         }
         public static string ThemHD(HoaDonDTO hd)
         {
             try

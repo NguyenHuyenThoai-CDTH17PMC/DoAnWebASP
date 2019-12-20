@@ -12,7 +12,10 @@ namespace GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if (!IsPostBack)
+            {
+                txtMK.Attributes.Add("onkeypress", "return clickButton(event,'" + btnDangNhap.ClientID + "')");
+            }
         }
 
         protected void btnDangNhap_Click(object sender, EventArgs e)

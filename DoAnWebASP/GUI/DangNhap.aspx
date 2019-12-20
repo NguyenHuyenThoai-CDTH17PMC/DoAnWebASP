@@ -12,6 +12,20 @@
 			</div>
 		</div>
 	</div>
+    <script type="text/javascript">
+
+        function clickButton(e, buttonid) {
+            var evt = e ? e : window.event;
+            var bt = document.getElementById(buttonid);
+
+            if (bt) {
+                if (evt.keyCode == 13) {
+                    bt.click();
+                    return false;
+                }
+            }
+        }
+    </script>
 	<!--end-breadcrumbs-->
 	<!------------------------------------------------------------------------------------------start-account-------->
 	<div class="account">
@@ -33,7 +47,7 @@
 					</div>
 					<div class="address">
 						<a class="forgot" href="#">Forgot Your Password?</a>
-                        <asp:Button ID="btnDangNhap" runat="server" Text="Login"  OnClick="btnDangNhap_Click" />
+                        <asp:Button ID="btnDangNhap" runat="server"  Text="Login"  OnClick="btnDangNhap_Click" />
 					</div>
                        
 				</div>

@@ -75,6 +75,9 @@
                             </li>
 
                             <li class="has-submenu">
+                               <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Admin/DSHoaDon.aspx"><i class="la la-briefcase"></i>Danh sách hóa đơn<div class="arrow-down"></div></asp:HyperLink>
+                                
+                            </li>
                                
                         </ul>
                         <!-- End navigation menu -->
@@ -95,9 +98,7 @@
                 <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
-                        <div class="page-title-box">
-                            <h4 class="page-title">Trang Chủ.</h4>
-                        </div>
+                        
                     </div>
                 </div>     
                 <!-- end page title --> 
