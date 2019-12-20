@@ -274,8 +274,8 @@
     <Content Include="Admin\assets\libs\treeview\jstree.min.js" />
     <Content Include="Admin\assets\libs\treeview\style.css" />
     <Content Include="Admin\assets\libs\twitter-bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
-    <Content Include="Admin\ChiTietSanPham.aspx" />
     <Content Include="Admin\DanhSachLoaiSP.aspx" />
+    <Content Include="Admin\ChiTietSanPham.aspx" />
     <Content Include="Admin\DanhSachSP.aspx" />
     <Content Include="Admin\DSTaiKhoan.aspx" />
     <Content Include="Admin\DSHoaDon.aspx" />
@@ -406,12 +406,10 @@
     <Compile Include="Admin\DanhSachLoaiSP.aspx.designer.cs">
       <DependentUpon>DanhSachLoaiSP.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\DanhSachSP.aspx.designer.cs" />
     <Compile Include="Admin\DanhSachSP.aspx.cs">
       <DependentUpon>DanhSachSP.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\DanhSachSP.aspx.designer.cs">
-      <DependentUpon>DanhSachSP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\DSTaiKhoan.aspx.cs">
       <DependentUpon>DSTaiKhoan.aspx</DependentUpon>

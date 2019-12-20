@@ -25,6 +25,11 @@ namespace BUS
 
             return SanPhamDAO.LaySanPhamTheoTheoSise(masp);
         }
+        public static List<SanPhamDTO> LaySanPhamCungLoaiTrongTrangChiTiet(string maloaisp)
+        {
+         
+            return SanPhamDAO.LaySanPhamCungLoaiTrongTrangChiTiet(maloaisp);
+        }
         public static bool CapNhatSoLuongTonKho(string masp, string SizeGiay, int soluongdamua)
         {
             if (SanPhamDAO.CapNhatTonkho(masp, SizeGiay, soluongdamua))
@@ -35,7 +40,30 @@ namespace BUS
                 return false;
             }
         }
+        //Chức năng tìm kiếm
+        public static List<SanPhamDTO> XemGiayTheoTenLoai(string tenloaisp)
+        {
+            return SanPhamDAO.XemGiayTheoTenLoai(tenloaisp);
+        }
+        public static List<SanPhamDTO> XemGiayTheoSize(string sizenumber)
+        {
+            return SanPhamDAO.XemGiayTheoSize(sizenumber);
+        }
+        public static List<SanPhamDTO> XemTheoGiaTuThapDenCao()
+        {
+          
+            return SanPhamDAO.XemTheoGiaTuThapDenCao();
+        }
+        public static List<SanPhamDTO> XemTheoGiaTuCaoDenThap()
+        {
+         
+            return SanPhamDAO.XemTheoGiaTuCaoDenThap();
+        }
+        public static List<SanPhamDTO> TimKiemNguoiDungNhap(string tukhoa)
+        {
 
+            return SanPhamDAO.TimKiemNguoiDungNhap(tukhoa);
+        }
         //new 
         public static DataTable LayDSChiTietSanPham(string sp)
         {
