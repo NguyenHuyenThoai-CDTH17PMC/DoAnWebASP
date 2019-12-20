@@ -15,6 +15,7 @@ namespace BUS
         {
             return SanPhamDAO.LayDSSanPham();
         }
+        
         public static SanPhamDTO LaySanPhamTheoMaSp(string masp)
         {
             return SanPhamDAO.LaySanPhamTheoMaSp(masp);
