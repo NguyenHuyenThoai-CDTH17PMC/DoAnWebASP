@@ -29,6 +29,7 @@ namespace GUI
                     rptGioHang.DataSource = dtbKetQua;
                     rptGioHang.DataBind();
                     lblTongTien.Text = GioHangBUS.TinhTongTienGH(tenTK).ToString();
+                    
                 }
             }
             else
@@ -80,7 +81,6 @@ namespace GUI
                     SanPhamBUS.CapNhatSoLuongTonKho(gh.MaSP,gh.SizeGiay,gh.SoLuong);
     
                 }
-
                 
                 Response.Redirect("GioHang.aspx");
  

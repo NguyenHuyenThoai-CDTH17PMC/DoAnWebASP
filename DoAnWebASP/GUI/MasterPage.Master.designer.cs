@@ -58,13 +58,31 @@ namespace GUI {
         protected global::System.Web.UI.WebControls.HyperLink hplTrangChu2;
         
         /// <summary>
-        /// lblLoiChao control.
+        /// hplProfile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLoiChao;
+        protected global::System.Web.UI.WebControls.HyperLink hplProfile;
+        
+        /// <summary>
+        /// hplLSHoaDon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplLSHoaDon;
+        
+        /// <summary>
+        /// hplContact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplContact;
         
         /// <summary>
         /// btnDangXuat control.
@@ -73,7 +91,16 @@ namespace GUI {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDangXuat;
+        protected global::System.Web.UI.WebControls.LinkButton btnDangXuat;
+        
+        /// <summary>
+        /// lblLoiChao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLoiChao;
         
         /// <summary>
         /// hplGioHang control.

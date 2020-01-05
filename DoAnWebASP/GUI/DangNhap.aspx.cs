@@ -29,7 +29,12 @@ namespace GUI
                 cookie.Value = tenTK;
                 cookie.Expires = DateTime.Now.AddDays(14);
                 Response.Cookies.Add(cookie);
-                Response.Redirect("TrangChu.aspx");
+                if(txtTenTK.Text=="admin" ){
+                    Response.Redirect("Admin/DanhSachSP.aspx");
+                }
+                else{
+                    Response.Redirect("TrangChu.aspx");
+                }
             }
             else
             {

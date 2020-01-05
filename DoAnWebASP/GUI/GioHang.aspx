@@ -51,7 +51,6 @@
 					<li><span>Unit Price</span></li>
 					<li><span>Size</span></li>
                     <li><span>Amount</span></li>
-					<li> </li>
 					<div class="clearfix"> </div>
 				</ul>
                 <asp:Repeater ID="rptGioHang" runat="server">
