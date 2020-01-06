@@ -16,6 +16,21 @@ namespace BUS
          {
              return HoaDonDAO.LayDSHoaDon();
          }
+         public static DataTable LayLSHoaDon(string tenTk)
+         {
+             return HoaDonDAO.LayLSHoaDon(tenTk);
+         }
+         
+         public static int TinhTongTienHD(string tenTK)
+         {
+             DataTable dtbKetQua = HoaDonDAO.LayLSHoaDon(tenTK);
+             int tongTien = 0;
+             foreach (DataRow dr in dtbKetQua.Rows)
+             {
+                 tongTien += Convert.ToInt32(dr["ThanhTien"]);
+             }
+             return tongTien;
+         }
          public static bool UpdateTrangThai(string id)
          {
              return HoaDonDAO.UpdateTrangThai(id);

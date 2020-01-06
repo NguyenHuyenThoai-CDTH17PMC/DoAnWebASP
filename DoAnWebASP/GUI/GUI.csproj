@@ -279,6 +279,7 @@
     <Content Include="Admin\DanhSachSP.aspx" />
     <Content Include="Admin\DSTaiKhoan.aspx" />
     <Content Include="Admin\DSHoaDon.aspx" />
+    <Content Include="LSHoaDon.aspx" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="MasterPage.Master" />
     <Content Include="Admin\assets\css\app-rtl.min.css.map" />
@@ -459,6 +460,13 @@
     </Compile>
     <Compile Include="GioHang.aspx.designer.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LSHoaDon.aspx.cs">
+      <DependentUpon>LSHoaDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LSHoaDon.aspx.designer.cs">
+      <DependentUpon>LSHoaDon.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

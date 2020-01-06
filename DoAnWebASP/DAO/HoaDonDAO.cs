@@ -17,7 +17,13 @@ namespace DAO
            SqlParameter[] param = new SqlParameter[0];
            return DataProvider.ExecuteSelectQuery(query, param);
        }
-       
+       public static DataTable LayLSHoaDon(string tenTK)
+       {
+           string query = "SELECT hd.MaHD, TenSP, AnhMinhHoa,NgayMua, DonGia, SoLuong, DonGia * SoLuong AS ThanhTien FROM HoaDon hd INNER JOIN  CTHoaDon cthd ON hd.MaHD = cthd.MaHD INNER JOIN SanPham SP ON cthd.MaSP = SP.MaSP WHERE hd.TenTaiKhoan =@TenTaiKhoan";
+           SqlParameter[] param = new SqlParameter[1];
+           param[0] = new SqlParameter("@TenTaiKhoan", tenTK);
+           return DataProvider.ExecuteSelectQuery(query, param);
+       }
         public static string LayMaHDLonNhat()
         {
             string query = "SELECT MAX(MaHD) FROM HoaDon";

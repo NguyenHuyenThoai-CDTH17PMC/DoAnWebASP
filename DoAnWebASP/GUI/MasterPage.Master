@@ -36,7 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
         });
     });
-				</script>
+		</script>
     <script type="text/javascript" >
         function openNav() {
             document.getElementById("mySidepanel").style.width = "150px";
@@ -132,7 +132,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                  <div id="mySidepanel" class="sidepanel">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                      <asp:HyperLink ID="hplProfile" runat="server" NavigateUrl="#">Profile</asp:HyperLink>
-                     <asp:HyperLink ID="hplLSHoaDon" runat="server" NavigateUrl="#">Invoice history</asp:HyperLink>
+                     <asp:HyperLink ID="hplLSHoaDon" runat="server" NavigateUrl="~/LSHoaDon.aspx">Invoice history</asp:HyperLink>
                      <asp:HyperLink ID="hplContact" runat="server" NavigateUrl="#">Contact</asp:HyperLink>
                      <asp:LinkButton ID="btnDangXuat" runat="server" OnClick="btnDangXuat_Click">Log out</asp:LinkButton>
                 </div>
