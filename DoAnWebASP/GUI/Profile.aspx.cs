@@ -20,7 +20,9 @@ namespace GUI
         }
         protected void load()
         {
-            TaiKhoanDTO tk = TaiKhoanBUS.LayThongTinTaiKhoan("customer");
+            HttpCookie cookie = Request.Cookies["TenTK"];
+            string ten = cookie.Value;
+            TaiKhoanDTO tk = TaiKhoanBUS.LayThongTinTaiKhoan(ten);
             txtTenTK.Text = tk.TenTaiKhoan;
             txtMK.Text = tk.MatKhau;
             txtEmail.Text = tk.Email;
@@ -31,8 +33,10 @@ namespace GUI
         }
         protected void btnCapNhat_Click(object sender, EventArgs e)
         {
+            HttpCookie cookie = Request.Cookies["TenTK"];
+            string ten = cookie.Value;
             TaiKhoanDTO tk = new TaiKhoanDTO();
-            TaiKhoanDTO tk2 = TaiKhoanBUS.LayThongTinTaiKhoan("customer");
+            TaiKhoanDTO tk2 = TaiKhoanBUS.LayThongTinTaiKhoan(ten);
             tk.TenTaiKhoan = txtTenTK.Text;
             tk.MatKhau = txtMK.Text;
             tk.Email = txtEmail.Text;
