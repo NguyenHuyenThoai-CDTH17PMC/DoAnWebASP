@@ -1,0 +1,9 @@
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Release\BUS.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Release\BUS.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Release\DAO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Release\DTO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Release\DAO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\bin\Release\DTO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\obj\Release\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\obj\Release\BUS.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\BUS\obj\Release\BUS.pdb

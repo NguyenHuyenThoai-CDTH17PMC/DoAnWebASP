@@ -13,7 +13,7 @@ namespace DAO
     {
         public static List<LoaiSanPhamDTO> LayDSLoaiSanPham()
         {
-            string query = "SELECT * FROM LoaiSanPham";
+            string query = "SELECT * FROM LoaiSanPham WHERE TRANGTHAI=1";
             SqlParameter[] param = new SqlParameter[0];
             DataTable dtbKetQua = DataProvider.ExecuteSelectQuery(query, param);
             List<LoaiSanPhamDTO> lstLoaiSanPham = new List<LoaiSanPhamDTO>();

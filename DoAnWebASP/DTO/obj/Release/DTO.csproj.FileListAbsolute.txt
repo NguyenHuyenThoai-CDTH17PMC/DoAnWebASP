@@ -1,0 +1,5 @@
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DTO\bin\Release\DTO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DTO\bin\Release\DTO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DTO\obj\Release\DTO.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DTO\obj\Release\DTO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\DTO\obj\Release\DTO.pdb

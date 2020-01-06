@@ -131,8 +131,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!--Profile-->
                  <div id="mySidepanel" class="sidepanel">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                     <asp:HyperLink ID="hplProfile" runat="server" NavigateUrl="#">Profile</asp:HyperLink>
-                     <asp:HyperLink ID="hplLSHoaDon" runat="server" NavigateUrl="~/LSHoaDon.aspx">Invoice history</asp:HyperLink>
+                     <asp:HyperLink ID="hplProfile" runat="server" NavigateUrl="~/Profile.aspx">Profile</asp:HyperLink>
+                     <asp:HyperLink ID="hplLSHoaDon" runat="server" NavigateUrl="~/LSHoaDon.aspx">Invoice history</asp:HyperLink> 
                      <asp:HyperLink ID="hplContact" runat="server" NavigateUrl="#">Contact</asp:HyperLink>
                      <asp:LinkButton ID="btnDangXuat" runat="server" OnClick="btnDangXuat_Click">Log out</asp:LinkButton>
                 </div>
