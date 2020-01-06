@@ -23,7 +23,6 @@
                                         <tr>
                                             <th scope="col">Mã Loại</th>
                                             <th scope="col">Tên Loại Sản Phẩm</th>
-                                            <th scope="col">Trạng Thái</th>
                                             <th scope="col"> Cập Nhật</th>                   
                                         </tr>
                                     </thead> 
@@ -36,9 +35,6 @@
                                             </td>
                                             <td>
                                                 <asp:Label ID="lblTensp" runat="server" Text='<%# Eval("TenLoaiSP") %>'></asp:Label>
-                                            </td>
-                                            <td>
-                                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("TrangThai") %>'></asp:Label>
                                             </td>
                                             <td>
                                                  <asp:Button ID="btnChon" runat="server" CssClass="btn btn-info waves-effect waves-light" CausesValidation="False" CommandName="ChonTK" Text="Chọn" CommandArgument='<%# Eval("MaLoaiSP") %>'/>

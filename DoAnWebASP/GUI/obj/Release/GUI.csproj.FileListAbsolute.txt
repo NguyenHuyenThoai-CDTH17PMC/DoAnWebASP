@@ -1,0 +1,12 @@
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\GUI.dll.config
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\GUI.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\GUI.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\BUS.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\DTO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\DAO.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\BUS.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\DTO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\bin\DAO.pdb
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\obj\Release\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\obj\Release\GUI.dll
+C:\Users\Admin\Documents\GitHub\DoAnWebASP\DoAnWebASP\GUI\obj\Release\GUI.pdb

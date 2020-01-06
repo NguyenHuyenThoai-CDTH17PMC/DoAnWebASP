@@ -19,9 +19,10 @@ namespace GUI.Admin
             {
                 rptChiTietSanPham.DataSource = SanPhamBUS.LayDSChiTietSanPham(Request.QueryString["ID"]);
                 rptChiTietSanPham.DataBind();
-                txtid.ReadOnly = true;
                 string masp = Request.QueryString["ID"];
-                if(masp != null)
+                txtmasp.Enabled = true;
+                txtid.Enabled = true; 
+                if (masp != null)
                 {
                     txtmasp.Text = masp;
                 }
@@ -35,12 +36,12 @@ namespace GUI.Admin
         {
             if (e.CommandName == "ChonTK")
             {
-                string ID = e.CommandArgument.ToString();
-                SanPhamDTO sp = SanPhamBUS.LayDSChiTietSanPhamID(ID);
-                txtmasp.Text=sp.Masp_id;
+                string id = e.CommandArgument.ToString();
+                SanPhamDTO sp = SanPhamBUS.LayDSChiTietSanPhamID(id);
+                txtid.Text = sp.ID;
+                txtmasp.Text = sp.Masp_id;
                 txtsoluong.Text = sp.SoLuongTonKho;
                 txtsize.Text = sp.Sizenumber;
-                txtid.Text = sp.ID;
             }
         }
         protected void btnCapNhat_Click(object sender, EventArgs e)
@@ -53,11 +54,11 @@ namespace GUI.Admin
                 {
                     rptChiTietSanPham.DataSource = SanPhamBUS.LayDSChiTietSanPham(Request.QueryString["ID"]);
                     rptChiTietSanPham.DataBind();
-                    Response.Write("<script>alert('Thêm mới sản phẩm thành công!')</script>");
+                    Response.Write("<script>alert('Cập nhật sản phẩm thành công!')</script>");
                 }
                 else
                 {
-                    Response.Write("<script>alert('Thêm mới sản phẩm thất bại!')</script>");
+                    Response.Write("<script>alert('Cập nhật sản phẩm thất bại!')</script>");
                 }
                 
         }
@@ -85,11 +86,11 @@ namespace GUI.Admin
             {
                 rptChiTietSanPham.DataSource = SanPhamBUS.LayDSChiTietSanPham(Request.QueryString["ID"]);
                 rptChiTietSanPham.DataBind();
-                Response.Write("<script>alert('Thêm mới sản phẩm thành công!')</script>");
+                Response.Write("<script>alert('Xóa sản phẩm thành công!')</script>");
             }
             else
             {
-                Response.Write("<script>alert('Thêm mới sản phẩm thất bại!')</script>");
+                Response.Write("<script>alert('Xóa sản phẩm thất bại!')</script>");
             }
         }
     }

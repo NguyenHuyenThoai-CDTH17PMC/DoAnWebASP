@@ -34,7 +34,7 @@ namespace DAO
         }
         public static SanPhamDTO LayDSChiTietSanPhamID(string masp)
         {
-            string query = "SELECT * FROM SizeGiay WHERE ID=@ID ORDER BY sizenumber ASC";
+            string query = "SELECT * FROM SizeGiay WHERE id=@ID";
             SqlParameter[] param = new SqlParameter[1];
             param[0] = new SqlParameter("@ID", masp);
             return ConvertToDTOsize(DataProvider.ExecuteSelectQuery(query, param).Rows[0]);
@@ -176,6 +176,8 @@ namespace DAO
         public static SanPhamDTO ConvertToDTOsize(DataRow dr)
         {
             SanPhamDTO sp = new SanPhamDTO();
+            sp.ID = dr["id"].ToString();
+            sp.Masp_id = dr["masp_id"].ToString();
             sp.Sizenumber = dr["sizenumber"].ToString();
             sp.SoLuongTonKho = dr["SoLuongTonKho"].ToString();
             return sp;
